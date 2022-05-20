@@ -11,7 +11,7 @@ The current files pass the format requirements as of 2018.
 
 Here is a link to the dissertation document.
 
-* Dr. Ebraheem Ali Azhar, ["Inorganic and Organic Photovoltaic Materials for Powering Electrochromic Systems"][AzharPhD], Electrical Engineering 2018.
+* Ebraheem Ali Azhar, ["Inorganic and Organic Photovoltaic Materials for Powering Electrochromic Systems"][AzharPhD], Electrical Engineering 2018.
  
 
 
