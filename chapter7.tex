@@ -1,0 +1,182 @@
+\chapter{Self-Powered, Inkjet Printed Electrochromic Films On Flexible and Stretchable Substrates}
+\section{Abstract}
+Electrochromic films have been used as a non-emissive material for display applications. Such materials have already been integrated in antiglare rearview mirrors for passenger vehicles as well as smart windows intended for energy savings for buildings. However, most electrochromic materials are deposited on rigid substrates, which prevent its use in flexible and stretchable electronic applications, where low temperature deposition techniques are desired.  Additionally, electrochormics require an external power source to drive the underlying reduction/oxidation reaction.  In this work, electrochromic materials inkjet-printed onto flexible and stretchable substrates have been explored. These devices are "self-powered" by organic solar cells also fabricated on flexible and stretchable substrate such as PDMS and PET. A set of inks based on a combination of synthesized and commercially obtained WO$_{3}$ nanoparticles, W-TiO$_{2}$ and TiO$_{2}$ nanoparticles were evaluated. The microstructure of the nanoparticles used in this study were examined under scanning electron microscopy for examining nanoparticle morphology, x-ray diffraction for chemical and structural characterization, and dynamic light scattering for particle size determination. Electrochromic layers were then ink-jet printed on flexible and stretchable PDMS substrates, using synthesized Ag nanowires as conductive, yet highly transparent electrodes.  The stretchable printed electrochromic devices under various stress conditions and electrochromic performances were evaluated and demonstrated clear switching behavior under external bias, with 7 second coloration time, 8 second bleaching time, and 0.36-0.75 optical modulation at $\lambda$=525 nm.  Cyclic voltammetry and galvanostatic charge/discharge measurements demonstrated high areal capacitance, with limited stability upon cycled operation.  The electrochromic devices were then integrated in an Internet of Things (IoT)-enabled switching configuration, self-powered by PCDTBT:PC$_{70}$BM organic photovoltaics.  The bulk heterojunction devices were evaluated with varying hole-transport layers and substrates, and exhibited the strongest performance of PCE$\approx{}$3\%, V$_{oc}$=0.9V and J$_{sc}\approx{}$10-15 mA/cm$^{^2}$.  The described self-powered, IoT-enabled, ink-jet printed electrochromic devices, fabricated on flexible substrates, are demonstrative of potential applications for wearable electronics.
+
+\section{Introduction}
+In recent years smart window technologies have become among the most rapidly developing fields, both in commercial and in academic realms. In conjunction with attention devoted to harvesting energy through solar radiation, researchers have recognized that solar radiation also represents the cause of major energy consumption through cooling loads of residential and commercial buildings \citep{us_department_of_energy_energy_2016}.  Traditional electrochromic devices have become increasingly popular as a method to solving this problem, but suffer the limitation of requiring external power.  Several researchers have integrated electrochromics with photovoltaics forming "self-powered," or photo-electrochromic devices.  These realizations have varied from printed devices, to vertically integrated devices, and even devices that harness an internal redox potential \citep{cannavale_forthcoming_2016}. However, these studies have focused their efforts on rigid or flexible substrates, but not necessarily stretchable substrates.  This distinction is heavily important for wearable implementations of such technologies as they must contour to irregular nature of the human body, but fundamentally represent many processing challenges.
+
+Electrochromic devices have been realized with a variety of material systems including organic semiconducting polymers such as PEDOT:PSS and metal oxides, of which, WO$_{3}$ has dominated \citep{taylor_microstructure_1996}.  Typical methods of deposition of WO$_{3}$ have included electrodeposition \citep{deepa_electrodeposited_2004} and sol-gel techniques.  Sol-gel techniques in particular require rather large and slowly ramped sintering temperatures to achieve crystalization of the WO$_{3}$ sols, and these processing temperatures are fundamentally incompatible with substrates that are otherwise sensitive to heat \citep{deepa_spin_2006}, including PET and PDMS.  Relatively few groups have explored inkjet printing electrochromicly active oxide-based nanoparticles \citep{costa_inkjet_2012, layani_nanostructured_2014, santos_structure_2015}.  This is important for substrate-independent patterning of functional electrochromics, and can later be extended into roll-to-roll mass-manufacturing.  Wojcik et al. systematically demonstrated the trade-offs between speed in electrochromic switching kinetics from the from the highly active crystal surfaces, and the intensity of optical modulation brought upon by the amorphous phase materials \citep{wojcik_microstructure_2012}.  Deepa et al. have shown that this is due to the fact that highly ordered crystal phases become more dense, and therefore inhibit Li$^{+}$ ion intercolation into the WO$_{3}$ sites, thereby reducing colaration \citep{deepa_case_2006}. Wojcik was also able to demonstrate that the inclusion of TiO$_{2}$ nanoparticles, which are also electrochromic in nature, is a cathodic material, and were able to reduce the switching potential considerably.  In a later analysis of their mixture experimental design, Wojcik et al. demonstrate that the inclusion of an amorphous matrix in tandem with the highly crystal nanoparticles can balance the tradeoffs of coloration and bleaching time, operating voltage, and optical density, such that an optimal ink can be achieved \citep{wojcik_statistical_2014}.
+
+In conjunction with low-temperature developments for processing oxide nanoparticle-based functional devices, the progress of organic photovoltaics, (along with other organic-based electronic and optoelectronic devices) have steepened considerably.  In particular, active layers composed of poly[N-9'-heptadecanyl-2,7-carbazole-alt-5,5-(4',7'-di-2-thienyl-2',1',3'-benzothiadiazole)]:phenyl-C71-butyric-acid-methyl \\(PCDTBT:PC$_{70}$BM) have quickly emerged as a high performance OPV devices as they have continually demonstrated high open circuit voltage and reported power conversion efficiencies of as high as 7.2\% \citep{sun_efficient_2011}, incorporating MoO$_{x}$ as the hole injection material.  Devices composed of this this bulk heterojunction have also been reported as particularly air-stable \citep{jung_all-inkjet-printed_2014, zhang_pcdtbt_2016} and have frequently been processed on flexible substrates using inkjet-printed techniques.  One of the major differences that sets apart PCDTBT from regioregular bulk heterojunction polymers is the elimination of the post-deposition anneal, in which it has been shown by other researchers \citep{staniec_nanoscale_2011} to not affect optical properties such as extinction coefficient, and degrade device performance, due to the introduction of midgap monomolecular recombination centers \citep{constantinou_effect_2015}.  The result is the retention of a highly amorphous and thus flexible properties, which has catalyzed its discussion in large scale plastic processing \citep{beaupre_pcdtbt:_2013}.  The aforementioned studies have largely focused on incorporating PCDTBT:PC$_{70}$BM onto PET, with ITO as the transparent conductor.  However, ITO takes on a variety of disadvantages including the scarcity of indium, leading to higher demand.  More importantly, ITO is highly brittle which limits its performance under strain.  Thus many researchers have elected to explore AgNWs embedded in PDMS as a substrate for realizing stretchable electrochromics, due to percolating nanowire networks that have shown excellent resilience to strain \citep{yan_stretchable_2014}.  Others have explored the use of embedded AgNW networks in PDMS as substrates for organic photovoltaic devices \citep{herrera_rocher_ag_2015} and some have even explored embedded AgNPs in active layers with improved device performance \citep{wang_extremely_2015, parlak_efficiency_2013}.  
+
+In this study the two technologies have been intersected to realize a fully functional solar-powered electrochromic device on a stretchable substrate, incorporating dual-phased WO$_{3}$ nanoparticles for the electrochromic device and powered by a PCDTBT:PC$_{70}$BM organic solar cell.  These devices are linked to an Internet of Things controller, allowing users to control electrochromic switching remotely.  As shown in Figure \ref{fig:fig7_1}(a), the organic photovoltaic device powers a modified Broadcom BCM43362 WiFi controller, driven by an ST Microelectronics STM32f205RGY6 ARM Cortex-M3 MCU (packaged by Particle Inc.).  The internal microcontroler drives a pulse-width modulated output that allows tuning of output potential.  When the user remotely varies intensity from a slider interface (provided as a mobile app by Particle) the load device, the stretchable electrochromic device is activated and transitions accordingly.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.46]{figures/fig7_1}
+\caption{(a) Material and system view and (b) Device realization of Self-powered IoT-enabled Electrochromic Stack}
+\label{fig:fig7_1}
+\end{figure}
+
+
+\section{Experimental Details}
+
+\subsection{AgNW Synthesis and PDMS Substrate Embedding}
+
+AgNWs grown by a solvothermal technique \citep{moreno_silver_2012} in which 0.1 mM of NaCl and 0.15 M of polyvinylpyrrolidone (PVP) were dissolved in 10 mL of ethylene glycol.  This salt solution was then placed in a buret and injected dropwise into a 0.1M solution of AgNO$_{3}$, also dissolved in 10 mL of ethylene glycol.  The light-yellow solution was stirred vigorously and half of this mixture was transferred into a 25 mL teflon lined autoclave, and heated at 160 \degree C for 2.5 hours.  The chamber was allowed to cool to room temperature and its contents were thoroughly washed by successive repetitions of dispersing in acetone and centrifugation to separate the solid content.  The nanowires were dispersed on a Si substrate and characterized under field-emission scanning electron microscopy.
+
+To embed the nanowires in PDMS, a PC filter paper was placed over a vacuum buchner filter, AgNWs in isopropanol dispersion were dispersed over the paper, and the isopropanol was allowed to evaporate naturally.  The PDMS (Sylgard 184) was prepared by mixing a base and curer (weight ratio 10:1) over the filter paper in a petri dish.  After curing at 80 \degree C for 2 hours, the filter paper was removed and the AgNWs remained embedded in the PDMS matrix.
+
+
+\subsection{OPV Device Fabrication}
+
+Both ITO coated PET foils and AgNW/PDMS membrane were ozonated for 10 minutes.  The samples were brought into an environmentally controlled glove box and PEDOT:PSS (non-conductive) was spun coated at 5000 RPM for 60 seconds.  PCDTBT:PC$_{70}$BM (1:4) was dissolved overnight at 80 \degree C spun coated at 700 RPM for 60 seconds.  The samples were placed into an evaporator chamber and LiF (7 \AA{})/Al (70 nm) cathode patterns (1 cm $\times$ 1 cm) were evaporated through a shadow mask.  The samples were then electrically characterized using a Kiethly electrometer under dark and AM 1.5G conditions.
+
+\subsection{PTA/WO$_{3}$ NP synthesis}
+
+\subsubsection{\label{sec:level2}Acetetylated Peroxotungstic Acid}
+Peroxotungstic Acid (PTA) was formed by dissolving 13 g of W powder with 80 mL H$_{2}$O$_{2}$ and 8 mL DI water in ice bath (due to the reactive exothermic reaction).  The solid yellow material was filtered with a standard 0.2 $\mu$m filter paper and then dissolved in 80 mL acetic acid.  This solution was then refluxed for 48 hours at 60 \degree C and was removed and vacuum dried.  A solid, light-yellow flaky product, Acetetylated Peroxotungstic Acid was extracted.
+
+\subsubsection{\label{sec:level2}WO$_{3}$ Nanoparticles}
+The PTA solid was dissolved in 0.3M HCl and placed in a hydrothermal autoclave for 2.5 hours.  The chamber was allowed to cool to room temperature, its contents removed and washed in DI water, and separated using centrifugation.
+
+\subsubsection{\label{sec:level2}Ink formation}
+A set of four inks based on the combination of synthesized WO$_{3}$ nanoparticles, commercial WO$_{3}$ nanoparticles, commercially obtained W-TiO$_{2}$ and TiO$_{2}$ nanoparticles, PTA, and oxylic acid dihydride (OAD) were mixed in isopropanol. The relative weights of each mixture were based on a previously reported D-optimal ink formulation.  The ink was diluted 1/10 after initial mixture, and patterns were printed 33 times using a Microfab Jetlab II printer.
+
+\subsubsection{\label{sec:level2}Electrochemical Characterization}
+An Autolab Potentiostat/Galvanostat was used to perform Cyclic voltammetry measurements at the specified voltages.  A four-channel Arbin system was used to perform Galvanostatic charge–discharge measurements.
+
+\section{Results and Discussion}
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.46]{figures/fig7_2}
+\caption{(a) UV/Vis Spectra of organic polymers (bottom) with overlayed AM 1.5G Solar Spectral irradiance (top). (b) Energy level diagram of studied bulk heterojunction device.}
+\label{fig:fig7_2}
+\end{figure}
+
+In Figure \ref{fig:fig7_2}, the absorption spectra of PCDTBT and PCDTBT:PC$_{70}$BM (1:4 weight ratio) are shown, overlayed with the terrestrial AM 1.5G solar spectrum.  Upon complete dissolution of PCDTBT with PC$_{70}$BM, it is observed that the PCDTBT peak at 580 nm reduces, and the composite polymer forms a new peak at 480 nm, as well as exhibiting a broadened absorption spectra across visible range--also observed by others \citep{ochiai_evaluation_2012, zhao_influence_2014}.  The attenuation of the natural PCDTBT absorption peak, and its change in pigment indicates a mixed bulk-heterojunction state of polymer and has been linked to the dimerization of PC$_{70}$BM \citep{distler_effect_2014}.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.7]{figures/fig7_3_1}
+\caption{Dark (red trace) and total illuminated (dashed green trace)  Current-Voltage characteristics, with their subtractive difference (dashed blue trace) segmented with the device structures (a) Device 1: PCDTBT: PC$_{70}$BM/PEDOT: PSS-NC/ITO/PET, (b) Device 2: PCDTBT: PC$_{70}$BM/ PEDOT: PSS-C/ITO/PET, (c) Device 3: PCDTBT: PC$_{70}$BM/PEDOT: PSS-NC/AgNW/PDMS.  (d) Total illuminated current-voltage characteristics for all studied devices (inset: device structure numbering).}
+\label{fig:fig7_3_1}
+\end{figure}
+
+Figure \ref{fig:fig7_3_1} shows the current-voltage (I-V) characteristics of the studied organic photovoltaic devices illuminated under AM 1.5G spectral irradiance with varying substrates, choice of hole transport layer, and a comparison to P3HT absorber (where device 1 in this report refers to PCDTBT:PC$_{70}$BM with non-conductive PEDOT:PSS hole transport layer, device 2 refers to PCDTBT:PC$_{70}$BM with conductive PEDOT:PSS hole transport layer, device 3 refers to PCDTBT:PC$_{70}$BM with non-conductive PEDOT:PSS hole transport layer on silver nanowires, and device 4 refers to P3HT:PC$_{60}$BM with non-conductive PEDOT:PSS hole transport layer).  Figure \ref{fig:fig7_3_1}(a-c) features single representative devices composed of PCDTBT:PC$_{70}$BM, and it is found that the dark current exhibits typical rectifying behavior, while the illuminated current exhibits an S-shaped response (which will be discussed in the next paragraph).  Initially it can be see that the subtracted illuminated current does not converge on a single value, suggesting superposition does not apply to this device structure.  When comparing all illuminated current response, illustrated in Figure \ref{fig:fig7_3_1}(d), the device configuration that performs best incorporates non-conductive PEDOT:PSS as the hole transport layer (HTL) on ITO/PET (device 1).  Device 1, as shown throughout Fig \ref{fig:fig7_3_2}, outperformed all other device structures, and was therefore selected for self-powered window application.
+
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.74]{figures/fig7_3_2}
+\caption{(a) Open-Circuit voltage, (b) Short-Circuit current, (c) Fill Factor, and (d) power conversion efficiency of all studied devices (inset: device structure numbering).}
+\label{fig:fig7_3_2}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.53]{figures/fig7_3_3}
+\caption{(a) Series Resistance (linear scale), (b) Series Resistance (log scale), and (c) Shunt Resistance (linear scale) of all studied devices (inset: device structure numbering).}
+\label{fig:fig7_3_3}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig7_4}
+\caption{Transmittance of various polymer stacks}
+\label{fig:fig7_4}
+\end{figure}
+
+Typically, non-conductive PEDOT:PSS is favored as to suppress lateral conduction of separated charges that never reach the cathode.  In the case of ITO in device 2, the conduction is comparable to that of conductive PEDOT:PSS, and therefore, forms a current divider that reduces overall performance.  Regardless of  PEDOT:PSS conductivity the formation of S-shaped characteristics emerge in all cases of PCDTBT:PC$_{70}$BM devices.  This phenomenon has been linked to the formation of a hole injection (electron extraction) barrier from HTL \citep{cheng_efficient_2015}, active layer degradation extended radially from the center of the device, indicating an inhomogeniety of device thicknesses due to the spin coating process and surface dipole formation from ambient conditions, Substrate conductivity, charge accumulation at the interfaces between the active layer and the electrodes \citep{r.mateker_improving_2013}, or oxidized species in a BHJ active layer acting as a carrier trapping site \citep{wang_stability_2012}, all of which have the ultimate effect of increasing series resistance (R$_{s}$).   A summary of extracted series resistances, subdivided by device structure, is presented in the box plot in Fig. \ref{fig:fig7_3_3}(a-b).  As seen in Fig. \ref{fig:fig7_3_3}(a), the series resistance of devices composed of PCDTBT:PC$_{70}$BM on ITO(120 $\Omega/\Box$)/PET is almost four times that of P3HT:PC$_{60}$BM on ITO(40 $\Omega/\Box$)/SiO$_{2}$.  For AgNW devices (which will be discussed in the next paragraph), illustrated in the log plot in Fig. \ref{fig:fig7_3_3}(b), the series resistance is almost 7 orders of magnitude larger than the next comparable device.  Based on the available conductivity data of choice of ITO coated PET substrates, the high surface resistivity may contribute to the observed high-R$_{s}$ S-shaped traced from illuminated response. The shunt resistance among all devices, as illustrated in Fig. \ref{fig:fig7_3_3}(c), is quite sufficiently, and comparably high.
+
+From Fig. \ref{fig:fig7_3_2}(a), both device 1 and device 3 use non-conductive PEDOT:PSS, and it is observed that their V$_{oc}$ remain in the range of 0.7-0.9 V.  However, despite performing the best, devices of device 1 configuration consistently demonstrate poor FF, shown in Fig. \ref{fig:fig7_3_2}(c).  From the above-discussed S-shaped response, a significant voltage dependence on photocurrent, either due to mechanisms of field dependent charge generation efficiency or collection efficiency \citep{etzold_ultrafast_2011} is uncovered.  As can be seen, both device 1 and device 2 do not exhibit ideal diodic characteristics when illuminated, but do under dark conditions.  Other reports have observed a drop in FF due to increased thicknesses of layer \citep{moon_nanomorphology_2012}, and relative weight ratio of PCDTBT to PC$_{70}$BM \citep{ochiai_evaluation_2012, zhao_influence_2014}, however in those cases, the rectification was retained.  This could be due to the relative resistance of ITO on PET which contributes to these loss mechanisms.  Device 3 formed of AgNWs networks on PDMS had the poorest performance, despite exhibiting a large V$_{oc}$.  From the plot of transmittance in Figure \ref{fig:fig7_4}, we observe that AgNW networks tend to absorb the most light in the visible spectrum, thereby shading the active layers that are deposited on the side opposite to illumination.  Among the noted features of degraded device performance in this study was the series resistance of AgNW devices, which was found to be 7 orders of magnitude larger than all other cases. This could be related to the presence of spatially inhomogeneous electrically inactive areas that arise due to inconsistent dispersion of AgNWs.  
+
+\begin{table}[htbp]
+\centering
+%p{5cm} is the space given to wrap the text
+\begin{tabular}{l | c | c}
+Material&Mean Diameter (nm)&Standard Deviation (nm)\\
+\hline \hline
+W-TiO$_{2}$ & 451 & 17.25  & 
+TiO$_{2}$ & 82.3 & 23.5  & 
+WO$_{3}$ (synthesized) & 582.5 & 32.82  & 
+WO$_{3}$ (commercial) & 325.8 & 2.98  & 
+PTA & 464.9 & 49.7  & 
+\end{tabular}
+\caption{Comparison of constituent nanoparticle sizes in electrochromic inks}
+\label{tab:tbl7_1}
+\end{table}
+
+The microstructure of the nanoparticles (shown in Figure \ref{fig:fig7_5}(a)) used in this study were examined under scanning electron microscopy Figure \ref{fig:fig7_5}(b), and their respective distribution of sizes using dynamic light scattering are summarized in Table \ref{tab:tbl7_1}. It can be seen that W-loaded TiO$_{2}$ nanoparticles are considerably larger than that of intrinsic TiO$_{2}$ (approximately 5.5$\times$ larger), and synthesized WO$_{3}$ nanoparticles were 1.8$\times$ larger than commercial ones.  This could be related to the allowed growth time of synthesized nanoparticles.  As a general rule of thumb the ratio nozzle size to particle size is approximately 9:1 in order to reduce the incidence of clogging and agglomeration \citep{wojcik_microstructure_2012}.  The nozzle used in this study was a MicroFab MJ-AT-01-50, low temperature printing device with an orifice diameter of 50 $\mu$m.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig7_5}
+\caption{(a) Photograph (b) SEM Micrographs (c) XRD, and (d) Raman Spectrograph of nanopowders}
+\label{fig:fig7_5}
+\end{figure}
+
+Figure \ref{fig:fig7_5}(c) shows the XRD pattern of all constituent nanoparticles used in this study, including W-loaded TiO$_{2}$, undoped TiO$_{2}$, synthesized WO$_{3}$, commercial WO$_{3}$, and PTA.  It is found that the relative difference between both cases of TiO$_{2}$ studied were relatively negligible, and closely correspond to the anatase phase of titanium oxide (JCPDS 21-1272).  Additionally, the synthesized and commericial WO$_{3}$ nanoparticles closely correspond to the monoclinic phase (JCPDS 20-1324).  The pure anatase nanoparticles exhibit a peak at 16.3 which does not match the JCPDS reference card.  The presence of this peak may be due to 1) Lack of thermal treatment, 2) water or hydride bonds, or 3) size effects of TiO$_{2}$.  However, in the W-loaded TiO$_{2}$ does not exhibit this peak, which may either be due to the size of the particle or the fact that W is suppressing its excitation.  However, due to the fact that no visible transference of WO$_{3}$ related peaks can be found in this diffractogram, it can be inferred that the concentration of W is relatively small and controlled, as compared to previous studies \citep{hong_catalytic_2014, mayoufi_doping_2014}.  For WO$_{3}$, it is found that the intensity of (002) plane in the synthesized case is slightly more intense than commercial case.  This could be an indication of tetragonal or orthohombic phase.  The diffraction pattern related to PTA matches that of prior studies \citep{deepa_electrochromic_2006}.
+
+In Figure \ref{fig:fig7_5}(d), the molecular structures of the nanoparticles have been investigated with Raman spectroscopy, and were normalized to the largest peak (143.22 cm$^{-1}$ for TiO$_{2}$ cases, 805 cm$^{-1}$ for WO$_{3}$ cases, and 660 cm$^{-1}$ for PTA).  Once again TiO$_{2}$ cases do not show significant differences among one another in regards to peak positions.  Peaks at 143.222 cm$^{-1}$ and 637.486 cm$^{-1}$ have been attributed to the 3Eg peak and peaks at 392.713 cm$^{-1}$, 515.291 cm$^{-1}$ have been attributed to the 2B1g peak. The W-doped TiO$_{2}$ nanopowder does not show any evidence of weak peaks attriubted to WO$_{3}$ or any vibrational modes related to W-O-W peaks, as addressed by other reports.  Synthesized nanopowders do not show evidence of hydrate phase and again correspond to the measured commercial case of monoclinic WO$_{3}$.  The evolution of peaks from amorphous PTA is shown to transition into crystalline nanopowders.  All peaks below 200 cm$^{-1}$ are related to the lattice modes of WO$_{3}$.  Peaks at 710 cm$^{-1}$ are described as the "stretching-mode" which is shifted from 820 cm$^{-1}$ in the amorphous phase PTA.  Broad peak at 636 cm$^{-1}$ for amorphous PTA related to O-W-O bending mode, which has been shifted to 328 and 274 cm$^{-1}$ for nanopowders.  And finally, amorphous PTA has peak at 946 cm$^{-1}$ which is consistent with the W=O or W-O terminal bond.
+
+
+\begin{table}[htbp]
+%p{5cm} is the space given to wrap the text
+\centering
+\begin{tabular}{l | c | c | c}
+Ink & \tau$_{color}$ & \tau$_{bleach}$ & \Delta OD|$_{\lambda=525 nm}$ \\
+\hline \hline
+1 & 7 & 10 & 0.3667 &
+2 & 15.3 & 16 & 0.7554 &
+3 & 10.5 & 12 & 0.6347 &
+4 & 8 & 13 & 0.5874 &
+\end{tabular}
+\centering
+\caption{Performance metrics of electrochromic inks}
+\label{tab:tbl7_2}
+\end{table}
+
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.7]{figures/fig7_6}
+\caption{(a) Comparison of Ink coloration (b) Printed electrochromic device on ITO/PET (c) Printed electrochromic device on AgNW/PDMS under flexure (d) tension (e) compression}
+\label{fig:fig7_6}
+\end{figure}
+
+
+
+Several images of the stretchable printed electrochromic device under various stress conditions are shown in Figure \ref{fig:fig7_6}.  A summary of electrochromic performances are shown in Table \ref{tab:tbl7_2}.  As noted, nanoparticles are used to circumvent high processing temperatures of traditional amorphous sol.  Additionally, higher temperatures densify crystal phases which ultimately limit Li$^{+}$ ion intercolation into the WO$_{3}$ sites.  Wojcik showed a major tradeoff between switching time kinetics, caused by highly crystal surfaces, and optical modulation, related to the amorphous phase of WO$_{3}$ \citep{wojcik_microstructure_2012}.  As noted, TiO$_{2}$ is cathodic and loaded into the system to reduce switching potential.  It appears that all measured factors in this case are highly dependant on the type of TiO$_{2}$ used in the electrochromic ink.  Pure anatase NPs result in extremely fast switching times at the expense of optical modulation, and the exact opposite is true of W-TiO$_{2}$.  These results suggest that in addition to the existing WO$_{3}$ and PTA compositions leading to electrochromic behavior that exist in the ink matrix, the W of TiO$_{2}$ also contribute to electrochromic activity because they also represent Li-ion insertion sites.   However, due studies investigating W-TiO$_{2}$ in photocatalytic activity \citep{chang_roles_2014} have shown that W ions have high coordination numbers and high electronegativity (Pauling scale: 2.36) which bond to O$^{2+}$ radicals.  The W$^{6+}$ in WO$_{3}$ has a coordination number of 6, whereas they are 4-coordinated in the TiO$_{2}$ matrix.  This leads to tightly bound O$^{2-}$ thereby impeding interfacial charge transfer.  As a result, electrochromic activity within the ink matrix is increased, but will switch over a longer time-scale due to reduced conductivity.
+
+
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.7]{figures/fig7_7}
+\caption{(a) Capacitive cycling and specific capacitance per cycle for device without EC ink and (b) voltage cycling and charge capacity per cycle for device with electrochromic ink}
+\label{fig:fig7_7}
+\end{figure}
+
+A stretchable capacitor (Figure \ref{fig:fig7_7}(a)) and stretchable battery (Figure \ref{fig:fig7_7}(b)) were formed without and with the inclusion of WO$_{3}$-based electrochromic ink, respectively. It can clearly be shown that the absence of WO$_{3}$, the system acts as a parallel-plate capacitor with LiClO$_{4}$ as the dielectric, with a 250 $\mu$m separation distance and area of 1 cm$^{2}$.  In Figure \ref{fig:fig7_7}(a), Charge-discharge cycles of the stretchable device was performed at a constant current density of 1 A/g at no applied tensile strain.  Figure \ref{fig:fig7_7}(b) shows the increase in specific capacitance with each charge/discharge cycle, and saturating at 3.5 F/g.  More cycling attempts are needed to understand the stability of the capacitor and to ensure that saturation behavior continues past 100 cycles.  The specific capacitance (C) was calculated from the slope of the discharge capacitance \citep{yu_stretchable_2009}:
+
+\begin{equation}
+C = \frac{2I}{m\frac{\Delta V}{\Delta t}}
+\end{equation}
+
+where I is the applied current and m is the average mass of the two AgNW electrodes.  A cycling study was then conducted with WO$_{3}$ based ink on one set of AgNW electrodes and results clearly demonstrate charging (and electrochromic effect) from lithium intercolation (Figure 5c).  In Figure \ref{fig:fig7_7}(d), the areal capacity of battery device degrades considerably after each charging cycle, which indicates asymmetry either in the applied voltage offset or that the EC ink is inefficient at charge storage.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.5]{figures/fig7_8}
+\caption{Circuit model of self-powered electrochromic device}
+\label{fig:fig7_8}
+\end{figure}
+
+Several OPV modules (3-6) wired in series (to increase voltage) and parallel (to current match) configurations, as well as the electrochromic device were paired using an Internet of Things (IoT) controller described in a configuration illustrated in Figure \ref{fig:fig7_1}(b) and Figure \ref{fig:fig7_8}.  A pulse-width modulated output train was generated by the microcontroller (powered by the OPV device) which allowed for the tuning of the output potential.  As a user changes intensity from a slider component provided by the mobile application, the electrochromic device treated as the load is accordingly transitioned.
+
+\section{Conclusion}
+In conclusion, self-powered electrochromic devices composed of dual-phased, inkjet printed TiO$_{2}$/WO$_{3}$/PTA nanoparticles for as the electrochromic device, and \\PCDTBT:PC$_{70}$BM organic solar cells were demonstrated on a stretchable platform.  Electrochromic devices demonstrated excellent performance with 7 second coloration time, 8 s bleaching time, and 0.36-0.75 optical modulation at $\lambda$=525 nm.  Organic cells demonstrated high power conversion efficiency needed to active and control the power delivery system (with PCE $\approx{}$ 3\%, V$_{oc}$ = 0.9V and J$_{sc}$ $\approx{}$ 10-15 mA/cm$^{^2}$), enabled by an IoT personal controller.  This work demonstrates the feasibility and potential impact of personalized, on-demand control of wearable smart-skins.

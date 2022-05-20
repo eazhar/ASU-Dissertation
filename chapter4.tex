@@ -1,0 +1,188 @@
+\chapter{ZnO-based Schottky and Oxide Multilayers for Visible-Transparent Photovoltaic Devices}
+
+\section{Abstract}
+Zinc oxide (ZnO) films are suitable for low-power applications including smart-window harvesters and electrochromic devices.  Initially, the scanning electron microscopy (SEM) microstructure of sputtered ZnO (2\% Mn) semiconductor thin films and their spectral response of high transparency in the visible range were determined.  Next, metal-semiconductor (MS), metal-insulator-semiconductor (MIS), and p-i-n heterojunction devices were fabricated, and their photovoltaic conversion under ultraviolet (UV) illumination was evaluated with and without oxygen plasma-treated surface electrodes.  To achieve MS Schottky devices, noble and/or transition contact metals (Au, Ag, and Ti/Ag) were deposited, with Al as a control (ohmic) case.  The Schottky parameters were fitted against the generalized Bardeen model, and density of interface states (D$_{it}$ $\approx$ 8.0$\times$10$^{11}$ eV$^{-1}$cm$^{-2}$) and the neutral level (E$_{o}$ $\approx$ -5.2 eV) were estimated.  These devices exhibited photoconductive behavior under UV illumination ($\lambda$=365 nm); note, low-noise, Ag-ZnO detectors exhibited the highest performance, with responsivity (R) and photoconductive gain (G) of 1.93$\times$10$^{-4}$ A/W and 6.57$\times$10$^{-4}$, respectively.  Confirmed via matched-pair analysis, post-metallization, oxygen plasma treatment of Ag and Ti/Ag electrodes resulted in an increase of the Schottky barrier height, which maximized with a 2 nm SiO$_{2}$ electron blocking layer (EBL), coupled with the suppression of recombination at the metal/semiconductor interface.  Also, the blocking of majority carriers, and the unaffected short circuit current due to tunneling of minority carriers, resulted in an open-circuit voltage (V$_{oc}$) of 1.2 V and short circuit current density (J$_{sc}$) of 0.68 mA/cm$^2$ for interdigitated devices under high energy, monochromatic UV-C illumination.
+
+
+\section{Introduction}
+Building-integrated photovoltaics (BIPV) have garnered immense attention for research and commercialization since building facets, such as windows and skylights, represent underutilized spaces for the incorporation of solar cells \citep{petter_jelle_building_2012}.  Due to its long development history following the microelectronics industry, silicon technology has largely dominated this BIPV platform  \citep{swanson_vision_2006}.  Since the development of the earliest Si p-n junction solar cells, comparably performing metal-semiconductor (MS) Schottky \citep{charlson_new_1972} and metal-insulator-semiconductor (MIS) photovoltaic devices \citep{card_photovoltaic_1977, thomas_low-cost_1980} have also come under extensive scrutiny; for the former, open circuit voltage (V$_{oc}$) and power conversion efficiency are highly correlated with Schottky barrier height \citep{zhu_numerical_2012}.  Moreover, since Si and other narrow gap, inorganic semiconductors are opaque in the visible range, varieties of functional challenges present themselves for replacing passive transparent surfaces with "smart," energy harvesting windows \citep{mercaldo_thin_2009}.
+
+Wide-gap materials, such as zinc oxide (ZnO), have gained traction toward meeting the aforementioned needs due to their visible-range transparency \citep{ozgur_comprehensive_2005}.  Additionally, analytical transport models have suggested that with large absorber bandgap energy, high open-circuit voltage (V$_{oc}$) can be achieved \citep{bowden2014pvcdrom}.  Certain models (after disregarding thermal, resistive, and optical losses) have determined a theoretical limit of single-junction visibly transparent solar cells composed of wide-gap materials (coupled with absorption in the near infra-red spectrum); predicted power conversion efficiencies (PCE) are as high as 21\% \citep{lunt_theoretical_2012}.  Metal-semiconductors (MS) and metal-insulator-semiconductor (MIS) barriers on ZnO have been a topic of vast exploration \citep{brillson_zno_2011}, and furthermore, ZnO is an excellent absorber of ultraviolet (UV) radiation, as noted by the realization of UV photodetectors \citep{soci_zno_2007, yu_zno_2012, azhar_vapor-transport_2018} and UV photocatalysts \citep{ullah_photocatalytic_2008, mahmood_enhanced_2011}.
+%detectors: Add ACS Omega Publication
+
+While photovoltage has been shown to vary with metal work function for bulk ZnO \citep{li_characterization_2009}, achieving transparent photovoltaics has led to enormous efforts in other oxide-based semiconductor absorbers \citep{ruhle_all-oxide_2012}.  In the context of conventional solar cells, ZnO has typically been integrated as a thin-film "window" material; and nanostructured ZnO have been utilized for their light trapping and light scattering properties \citep{hagiwara_improved_2001, son_charge_2012}. Weak photovoltaic conversion utilizing ZnO absorbers under ultraviolet illumination has also been discussed in some reports \citep{nakano2008transparent, amiruddin2016role}. Most recently, interest in scavenging energy from UV radiation has become of great interest for structural and vehicular window integration, and have largely focused on absorber-tuned polymer-based solar cells composed of ZnO-C$_{60}$ core-shell quantum dots \citep{son_high_2011}, fluorophore-doped dye-sensitized solar cells \citep{lin_manipulation_2015}, and PTB7:PCBM \citep{liu_efficient_2013, lim_dong_chan_semitransparent_2017}.  While purely inorganic material-based devices are considerably less reported, interests have arisen from p-GaN/MgO/n-ZnO layers exhibiting 0.46\% PCE \citep{yang_transparent_2016} to ZnO/NiO/Ag layers demonstrating PCE as high as 6\% \citep{patel_excitonic_2017}, under ultraviolet illumination.  Although the terrestrial energy content of UV radiation is fundamentally small, power conversion through limited absorption may supply enough energy for applications that require a relatively low operating point, such as electrochromic windows \citep{davy_pairing_2017}.
+
+In this study, the microstructral, optical, and electronic properties of sputtered ZnO thin films in varying device configurations (MS, MIS, and p-i-n heterojunction) were analyzed.  The electrical response as a function of Schottky barrier height, varied by metal-semiconductor work function differences, was used to estimate the density of interface states (D$_{it}$) and the surface neutral level (E$_{o}$).  To address this, the effect of SiO$_{2}$ electron blocking layer (EBL) thickness toward suppressing metal/semiconductor interface recombination was examined.  In addition, post-metallization oxygen plasma treatment was carried out to maximize the effective barrier potential experienced by carriers.  Finally, the photovoltaic and photodetection performance for assorted electrode patterning of Ag$_{2}$O and Ti$_{x}$/Ag$_{2}$O electrodes, differentiated by illumination energy, are reported.  A brief discussion of the limitations in forming a robust model in completely describing transport phenomena in the specified oxide multilayers is also presented.
+
+\section{Experimental Details}
+
+Glass microslides coated with indium tin oxide (ITO, Delta Technologies, CG-61IN) were submerged in Piranha (70\% sulfuric acid, 30\% hydrogen peroxide) for 10 minutes to remove organic contaminants. Varying thicknesses of ZnO (2\% Mn) were deposited via RF magnetron sputtering (Lesker PVD 250) at 400 W in 1 $\times$ 10$^{-6}$ Torr O$_{2}$ ambient.  Surface microstructure of ZnO films was characterized with Field Emission Scannning Electron Microscopy (FESEM, Hitachi S4700-II), operating at 15 kV excitation.  Visible light transmittance was measured with a halogen broad band white light source (Princeton Instruments TS-425) and concave grating spectrometer (StellarNet BLACK-Comet).  Fourier transform infrared spectroscopy (FTIR, Nicolet 800) system was used to characterize transmittance in the wavenumber range from 400 to 4000 cm$^{-1}$ using a potassium bromide (KBr) beam splitter.  In order to passivate the ZnO surface, all samples subsequently received oxygen plasma (Tegal PlasmaLine Asher) treatment of 250 W for 15 minutes.  A Plasma Enhanced Chemical Vapor Depositor (PECVD, Oxford 100) was used to coat the ZnO surface with thin (2 nm and 5 nm) SiO$_{2}$ electron blocking layers (EBL).  Surface electrodes including Al, Au, Ag and Ti/Ag (250 nm each, 5 nm/245 nm Ti/Ag) were deposited atop the coated and uncoated ZnO films via electron beam evaporation (CHA SE-600). Device structures analyzed included adjacent circular patterns of varying diameters (300-700 $\mu$m diameter) in order to control for device area in barrier height determination with current-voltage (I-V) measurements (Keithly 4200).  After metallization and initially-illuminated electrical characterization, a second oxygen plasma treatment was undertaken on four blocks of Ag and Ti/Ag device test groups (without EBL) at 50 W for 5 minutes and at 250 W for 5 min; the contacts visibly darkened from reflective to completely opaque, indicating the formation of Ag$_{2}$O \citep{bock_growth_2004}.  These devices were subsequently re-measured, and the increased Schottky barrier heights were inferentially evaluated as matched pairs. Additionally, an interdigitated grid (0.5 cm $\times$ 1 cm, 1 $\mu$m pitch) shown in Fig. \ref{fig:fig4_1}(b), was photolithographically patterned on ZnO thin film devices for photovoltaic measurement under monochromatic UV-A (365 nm) and UV-C (254 nm) illumination (UVP EL Series).  A final schematic of the device fabrication workflow is illustrated in Fig. \ref{fig:fig4_1}(a), highlighting the primary experimental design parameters.  Post-processing of data, which included data transformation, parameter extraction, analysis, and visualization were performed in R language with the ggplot2 library.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.48]{figures/fig4_1}
+\caption{(a) Schematic of device fabrication procedure. (b) Image of final device structure with grid pattern (inset: optical microscope image of device). (c) Equilibrium energy band diagram of high interface state density Schottky-Bardeen device configuration with estimated surface neutral level. (d) Energy band diagram of final p-i-n heterojunction device with Ag$_{2}$O contacts illustrating majority carrier blocking, minority carrier tunneling transport mechanism under forward bias and UV illumination (Note: energy levels and band offsets not to scale).}
+\label{fig:fig4_1}
+\end{figure}
+
+\section{Results and Discussion}
+
+\subsection{Optical and Microstructural Properties}
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig4_2}
+\caption{(a) Visible range transmission spectra of ZnO thin films.  Increased film thickness results larger frequency periodic signature with local minima and maxima corresponding to constructive and destructive integer-factor wavelengths (inset: Scanning electron micrograph of sputtered ZnO) (b) FTIR (mid-IR) spectra of ZnO and ZnO (2$\%$ Mn) films (red and teal trace respectively).}
+\label{fig:fig4_2}
+\end{figure}
+
+The visible-range spectral transmittance of ZnO films are illustrated in Fig. \ref{fig:fig4_2}(a).  As previously reported for ZnO and other wide-gap semiconductors, the transmittance in the visible spectrum is found to be high, with a slight attenuation for increased film thickness due to larger penetration depth \citep{song_optimisation_2002}.  While a small component of the signal is lost due to reflectance, the transmission profile at and above 370 nm indicate excellent absorption in the UV range, the onset of which begins at the band edge of ZnO.  Increased film thickness also results in a pronounced higher frequency periodic interference signature stemming from path differences of integer-factor wavelengths, with local minima and maxima corresponding to destructive and constructive interference, respectively.  An empirical dispersion relationship for ZnO \citep{bond_measurement_1965} is expressed in (\ref{eq:1}), and the thickness is extrapolated from interference fringes \citep{tuzemen_dependence_2009} from (\ref{eq:2}).  The thicknesses are confirmed as 504 $\pm$ 15.6 nm, 1039 $\pm$ 28.5 nm, and 2503.1 $\pm$ 37.8 nm, respectively.
+
+\begin{equation} \label{eq:1}
+n^2 = 2.81418+\frac{0.87968\lambda^2}{\lambda^2-0.3042^2}−0.00711\lambda^2
+\end{equation}
+
+\begin{equation} \label{eq:2}
+t=\frac{\lambda_1\lambda_2}{2[n(\lambda_1) \times \lambda_2-n(\lambda_2) \times \lambda_1]}
+\end{equation}
+The surface microstructure of the ZnO films is shown in the scanning electron micrograph inset of Fig. \ref{fig:fig4_2}(a) and the presence of grains typical of sputtered ZnO thin films are observed. These columnar, grains on the film surface have been attributed to the high power of Zn$^{2+}$ and O$^{2-}$ ions, from the sputtering process, irregularly adjusting their bond length and settling in various bond directions, promoting periodic segregated nucleation, and forming as distinct grains \citep{yu_effects_2005}.  
+
+The vibrational bands in the IR range for pristine ZnO films and Mn (2\%)-doped ZnO films are shown in Fig. \ref{fig:fig4_2}(b). The peak at 545 cm$^{-1}$ in both spectra has been attributed to the stretching mode of ZnO, but the shift of the secondary peak at approximately 538 cm$^{-1}$ in Mn-doped ZnO indicates a perturbation in the Zn-O-Zn network from the incorporation of Mn \citep{hao_structural_2012}.  Previous studies for photocatalytic applications have linked the increased visible range absorption to the relative concentration of Mn$^{2+}$ as a substitutional dopant for Zn$^{2+}$.  This has been attributed to the electron transitions from the sp-d exchange interactions between the Mn$^{2+}$ ions and photogenerated carriers in ZnO \citep{lu_enhancement_2012}.
+
+\begin{figure*}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig4_3}
+\caption{Current Voltage response of ZnO films in dark (black) and under UV illumination (red) with (a) Au, (b) Al (nA response), (c) Ag, and (d) Ti/Ag Shottky contacts. Insets for each electrode: (1) median extracted Schottky barrier height along with median ideality factor and (2) photodetection performance and noise parameters.}
+\label{fig:fig4_3}
+\end{figure*}
+
+\subsection{Electrical and Optoelectronic Properties}
+
+The current-voltage characteristics of two-terminal, metal-semiconductor (MS) Schottky devices are shown in Fig. \ref{fig:fig4_3}.  The choice of contact metal determines conductivity, as well as rectifying or ohmic behavior.  As illustrated in Fig. \ref{fig:fig4_3}(b), ohmic conductivity is exhibited for Al, whereas Ag, Au, and Ti/Ag exhibit asymmetry across the origin.  Applying the thermionic emission model, expressed in (\ref{eq:4}), with the ZnO Richardson constant A$^{*}$ taken as 32 $\frac{A}{cm^{2}K^{2}}$), to measured current-voltage responses without illumination, a series of Schottky Barrier heights and ideality factors (\ref{eq:5}) were extracted for each test electrode, and are appended to each plot in Fig. \ref{fig:fig4_3}.
+
+\begin{equation} \label{eq:4}
+\phi_B = {\frac{kT}{q}}ln(\frac{A^{*}T^{2}}{J_{o}})
+\end{equation}
+
+\begin{equation} \label{eq:5}
+n = \frac{q}{kT}\frac{dV}{d(ln(J))}
+\end{equation}
+
+The results of pre-plasma treated barrier height extractions are consistent with previous studies on treated and untreated Zn or O polar faces, which have indicated Schottky barrier heights in the range of 0.6 eV - 0.8 eV \citep{ozgur_comprehensive_2005} despite measureable metal-semiconductor workfunction differences.  This behavior has been attributed to the dominance of Fermi level pinning by a high density of interface states (D$_{it}$) due to point defects over metal induced gap states \citep{allen_influence_2008}. To describe the interface transport behavior of measured ZnO thin film devices, a modified set of linear systems based on Cowley and Sze's generalized case of the Bardeen model \citep{cowley_surface_1965}, expressed in (\ref{eq:33asdf}), was evaluated with extrapolated parameters and known quantities (note: this model is only applied to analysis of metal-semiconductor devices, i.e. without EBL).  Modeled in Fig. \ref{fig:fig4_1}(c), the neutral level (E$_{o}$) is estimated to be approximately -5.2 eV, and the interface state density (D$_{it}$) is approximately 8.0 $\times$ 10$^{11}$ ev$^{-1}$cm$^{-2}$, which is in agreement with reports of interface state determinations for ZnO with deep-level transient spectroscopy (DLTS), summarized in Table \ref{tab:tbl_4_1}.
+
+
+\begin{equation} \label{eq:33asdf}
+\begin{bmatrix}
+    \phi_{Bn (Ag)}  \\ 
+    \phi_{Bn (Au)} 
+\end{bmatrix} = \\
+\frac{1}{1+\frac{qD_{it}\{\delta\}}{\epsilon_{r}\epsilon_{o}}}(
+\begin{bmatrix}
+    \phi_{m (Ag)}  \\ 
+    \phi_{m (Au)} 
+\end{bmatrix}
+-\chi) + (1 - \frac{1}{1+\frac{qD_{it}\{\delta\}}{\epsilon_{r}\epsilon_{o}}})(E_{g}-(E_{o}-E_{v}))
+\end{equation}
+
+\begin{table*}[t]
+%p{5cm} is the space given to wrap the text
+\begin{tabular}{p{4 in} | r }
+Material Structure (Synthesis/Deposition Technique) & D$_{it}$ (eV$^{-1}$cm$^{-2}$) \\
+\hline \hline
+ZnO:Al Thin Film (sputtered) \citep{oh_transparent_2006} & 1.66 $\times$ 10$^{10}$ - 4.46 $\times$ 10$^{11}$ \cr
+SiO$_{2}$/ZnO Thin Film (sputtered) \citep{nandi_electrical_2003} & 6.84 $\times$ 10$^{11}$ - 8.52 $\times$ 10$^{11}$ &
+ZnO Thin Film (hydrothermal/sol-gel) \citep{yakuphanoglu_controlling_2011} & 1.38  $\times$ 10$^{8}$  &
+Au/ZnO Nanorod (hydrothermal) \citep{hussain_interface_2012} & 1.9 $\times$ 10$^{8}$ &
+ZnO Thin Film (electrodeposition) \citep{aydogan_electrical_2009} & 17.3  $\times$ 10$^{13}$  &
+ZnO Nanorod (hydrothermal) \citep{faraz_interface_2012} &  7.98  $\times$ 10$^{10}$ - 3.74  $\times$ 10$^{11}$  &
+ZnO:Mn Thin Film (sputtered, this work) &  8.0 $\times$ 10$^{11}$  &
+
+
+\end{tabular}
+\caption{Comparison of interface state densities as reported for ZnO material systems}
+\label{tab:tbl_4_1}
+\end{table*}
+
+Previous reports investigating Ti/Au, Ti/Al, and Ti/Pt with alloying post-anneal \citep{brillson_zno_2011} have demonstrated ohmic behavior.  Brillson had noted that Ti and Al react strongly with chalcogenides, forming alloyed n-type barriers with generally ohmic behavior exhibited, and that analysis was later extended to oxide-based systems \citep{brillson_structure_1982, brillson_zno_2011}.  However, in this work, Ti/Ag exhibits rectification, which suggests that thermionic emission dominates.  Considering the 5 nm thickness of Ti (as compared to that of the 1 $\mu$m ZnO thin film), Ti spontaneously forms into a kinetically-limited semiconducting TiO$_{x}$ layer, due to its high negative formation energy, by scavenging oxygen from ZnO \citep{dey_electrical_1995}.  The net effect is a metal-semiconductor interface between Ag and TiO$_{x}$, thereby increasing the measured barrier potential, especially evident in post-metallization oxygen plasma treated layers.
+
+Devices in the metal-semiconductor configuration did not exhibit photovoltaic behavior under UV-A ($\lambda$=365 nm) illumination, however, a photoconductive effect was observed.  The spectral responsivity (R$_{\lambda}$) and photoconductive gain (G), key metrics distinguishing photodetector systems, are defined according to relationships expressed in previous reports \citep{yu_zno_2012, azhar_vapor-transport_2018}.  Studies of ZnO-based UV detectors have attributed its photoconductive behavior to the desorption and absorption of O$_{2}$ on the surface of ZnO, creating surface band bending with reduced depletion width, which allows photogenerated carriers to be separated by an electric field \citep{liang_zno_2001}.  Detector noise characteristics, including noise-equivalent power (NEP) and detectivity (D$^{*}$) \citep{sze_physics_2006, yu_zno_2012, azhar_vapor-transport_2018}, were also evaluated in order to distinguish the sensitivity of ZnO thin-film devices before any post-metallization plasma treatment or pre-metallization EBL deposition.  Along with detector performance metrics, detector noise characteristics, differentiated by surface electrode, are appended with each plot in Fig. \ref{fig:fig4_3}.
+
+\begin{equation} \label{eq:6}
+R_{\lambda} =\frac{\Delta I}{PA}
+\end{equation}
+
+\begin{equation} \label{eq:7}
+G = \mathlarger{\left(\frac{\Delta I}{e}\right)}/\mathlarger{\left(\frac{P}{h\nu}\right)}
+\end{equation}
+
+Noteworthy deviations in performance and noise metrics were exhibited with Al electrodes, in which three orders of magnitude reduction in G (1.05$\times 10^{-7}$) is found as compared to that of Au (3.52$\times 10^{-4}$), Ag (6.57$\times 10^{-4}$), and Ti/Ag (3.05$\times 10^{-4}$).  The same general trend is exhibited with noise parameters, indicating decreased spectral sensitivity in the case of Al.  Reports on ohmic behavior for non-alloyed Al have been discussed by Kim et al., namely the formation of an interfacial Al$_{2}$O$_{3}$ that creates an accumulation of oxygen vacancies behaving as donors, thereby leading to field emission transport \citep{han-ki_kim_formation_2003}.  The heavily doped region, formed by Al penetrating ZnO, diminishes the effect of surface band-bending from oxygen desporption \citep{feng2012handbook}, reducing the observed R$_{\lambda}$ and G.  With high electron concentration in the heavily doped region, along with trap levels present as intrinsic defects in ZnO, a reduction of recombination rate and increased electron accumulation has been described among reports of time-resolved photoresponse measurements of  Al:ZnO photodiodes \citep{amiruddin2016role}.  This reduction in photoconductivity is accompanied by thermal agitation of charge carriers \citep{hsu_origin_2004}, which is linked to thermal noise, and may explain the significant increase in NEP for Al contacts.
+
+\begin{equation} \label{eq:8}
+NEP = (1/R_{\lambda})(2qI_{d}+4kT/R_{v})^{1/2}
+\end{equation}
+
+\begin{equation} \label{eq:9}
+D^{*} = (Af)^{1/2}/NEP
+\end{equation}
+
+The results of the matched pair analysis of Ag and Ti/Ag electrodes is presented in Table \ref{tab:tbl4_3}, which tabulates electrode type, oxygen plasma power, number of samples, 95\% confidence interval of the barrier height difference (Note: intervals that do not overlap 0 indicates rejection of the null hypothesis), t-statistic and associated p-value.
+
+\begin{table}[h!]
+\centering
+%p{5cm} is the space given to wrap the text
+\begin{tabular}{c | c | c || c | c | c}
+\centering
+Electrode & Plasma Power (W) & df & Confidence Interval (eV) & t & p-value\\
+\hline \hline
+Ag & 50 & 11 & [0.037, 0.111] & 4.41 & 1.052  \times 10$^{-3} \cr
+Ag & 250 & 8 & [0.189, 0.214] & 37.06 & 3.083 \times 10$^{-10} \cr
+Ti/Ag & 50 & 9 & [0.093, 0.152] & 9.51 & 5.409 \times 10$^{-6} \cr
+Ti/Ag & 250 & 11 & [0.084, 0.151] & 7.69 & 9.521 \times 10$^{-6} \cr
+\end{tabular}
+\\
+\caption{Matched Pair two-sample t-test analysis of difference in extracted Schottky Barrier Height before and after oxygen plasma treatment}
+\label{tab:tbl4_3}
+\end{table}
+
+The effect of oxygen plasma post-metallization was explored in the case of Ag and Ti/Ag electrodes, and the treatment quite clearly leads to the formation of Ag$_{2}$O and TiO$_{x}$/Ag$_{2}$O.  The barrier heights were extracted before and after treatment and were analyzed as two-sample matched pairs.  The null and alternative hypothesis, along with associated probability of a type-I error (p-value) are presented in Fig. \ref{fig:fig4_4}(b) for each combination of Ag and Ti/Ag electrodes, along with plasma treatment power. The results confirm that the barrier energy, in all cases, exhibited a statistically significant increase as a direct result of oxygen plasma treatment.  Other studies of Ag$_{2}$O contacts on ZnO have also found a significant improvement on barrier heights as a direct result of silver oxidation \citep{allen_metal_2006}, and have attributed this effect to the predicted high work function of the thin O-terminated Ag$_{2}$O (001) and (111) surfaces \citep{gajdos_ab_2003}, while others have modeled Ag$_{2}$O as a p-type semiconductor \citep{li_insights_2003}.  Since the Ag$_{2}$O is already in an oxidized state, it does not introduce additional oxygen vacancies to the ZnO surface.  The effect of induced oxidation leading to increased Schottky barrier height has been observed with other noble metals on ZnO \citep{allen_oxidized_2009}. Along with its high formation energy, with higher plasma power, the formation of TiO$_{x}$ from Ti is amplified, once again mitigating the electronic transport modification of a separate (e.g.,TiO$_{x}$/Ag$_{2}$O) interface and dissimilar barrier with ZnO.  This effect explains the larger barrier heights extracted for all Ti/Ag (TiO$_{x}$/Ag$_{2}$O) cases, as compared to the Ag (Ag$_{2}$O) case alone.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig4_4}
+\caption{(a) Effective Barrier potential variation as a function of EBL thickness and electrode metal.  (b) Schottky Barrier height variation due to O$_{2}$ plasma treatment with connecting line matching individual devices before and after treatment (Bottom: null and alternative hypothesis of matched pair two sample t-test; associated p-values within inset of each experimental group).}
+\label{fig:fig4_4}
+\end{figure}
+
+\begin{figure*}[t]
+\centering %centers the picture
+\includegraphics[scale=0.65]{figures/fig4_5}
+\caption{Current Voltage response in dark, UV (365 nm) and UV (254 nm) illumination (black, red, and blue traces, respectively) for (a) Au, (b) Ag$_{2}$O, (c) TiO$_{x}$/Ag$_{2}$O, and (d) TiO$_{x}$/Ag$_{2}$O electrodes patterned as interdigitated grids.}
+\label{fig:fig4_5}
+\end{figure*}
+
+Electrical characterization of devices at varying levels of SiO$_{2}$ thickness (0 \AA, 20 \AA, and 50 \AA) for each metal electrode was conducted, and the extracted barrier heights are summarized in Fig. \ref{fig:fig4_4}(a).  (Note: Transport modeled for thermionic emission in MIS devices entails a current density (J) dependence on exp(V$^{1/2}$), rather than exp(V) \citep{sze_physics_2006}, and was accounted for accordingly in barrier potential extraction). The effective barrier potential was found to vary in correspondence to the thickness of the EBL, and was maximized for a thickness of 20 \AA.  The SiO$_{2}$/ZnO interface has been investigated by  Mohammadnejad et al. who have proposed that thermal electron emission is suppressed with the inclusion of the insulator layer, and that Fowler-Nordheim tunneling dominates with thermionic field emission occurring for a greater barrier height than the MS case \citep{mohammadnejad_dark_2008}.  In conjunction with oxygen plasma used to induce silver oxidation, this treatment may further passivate ZnO and SiO$_{2}$ surfaces \citep{allen_influence_2008}, and reduce incidences of electron hopping and recombination through trap states within the SiO$_{2}$/ZnO interface \citep{allen_silver_2007}. For insulator thicknesses greater than 20 \AA, the barrier width increases leading to heavily suppressed (leakage) current and reduced barrier potentials \citep{brillson_zno_2011, yang_impact_2016}.%, and is modeled in the energy band diagram of Fig. \ref{fig:fig4_1}(c).  
+
+\begin{table*}[t]
+%p{5cm} is the space given to wrap the text
+\begin{tabular}{p{0.8 in} | p{0.6 in} | p{0.8 in} || p{0.5 in} | p{0.8 in} | p{0.5 in} | p{0.8 in}}
+Contact Metal & Contact Geometry & Illumination Wavelength (nm) & Voc (V) & Jsc (mA/cm$^{2}$) & Fill Factor & Power Conversion Efficiency\\
+\hline \hline
+Ag$_{2}$O & circle & 365 & 0.85 & 9.49 $\times 10^{-4}$ & 0.2705 & 2.55 $\times 10^{-3}$ \cr
+Ag$_{2}$O & circle & 254 & 0.9 & 2.33 $\times10^{-3}$ & 0.2709 & 7.72 $\times 10^{-3}$ \cr
+TiO$_{2}$/Ag$_{2}$O & circle & 365 & 0.85 & 0.144285 & 0.2983 & 0.332 \cr
+TiO$_{2}$/Ag$_{2}$O & circle & 254 & 0.95 & 0.205098 & 0.3486 & 0.472 \cr
+TiO$_{2}$/Ag$_{2}$O & grid & 365 & 0.9 & 0.124067 & 0.3901 & 0.602  \cr
+TiO$_{2}$/Ag$_{2}$O & grid & 254 & 1.2 & 0.729128 & 0.5394 & 0.341 \cr
+\end{tabular}
+\\
+\caption{Comparison of solar cell performance for Schottky contact metal, device configuration, and illumination conditions.}
+\label{tab:tbl4_2}
+\end{table*}
+
+
+The I-V responses of devices, incorporating a 20 \AA{} SiO$_{2}$ EBL and post-metallization oxygen plasma treatment, under UV illumination are shown in Fig. \ref{fig:fig4_5}. Although characteristic photovoltaic response curves are observed for devices with TiO$_{x}$/Ag$_{2}$O contacts, devices with Al (not shown) and Au do not exhibit such behavior.  The power conversion efficiencies were extracted using (\ref{eq:7}), where P$_{light}$ is the power of the illumination source and FF is the fill factor (defined as a ratio of the maximum power point to the product of short circuit current, I$_{sc}$, and open circuit voltage, V$_{oc}$).  The use of a large area interdigitated grid design that minimizes shading while maintaining conduction was also explored in this work and resulted in greater power conversion efficiency, as shown in Fig. \ref{fig:fig4_5}(d). These results, arranged by device contact geometry and illumination configurations, are summarized in Table \ref{tab:tbl4_2}.  Power losses from the illuminated electrode are proportional to the cube of line spacing, however, narrower line widths with thicker metal can reduce resistive losses, while allowing for shorter spacing \citep{serreze_optimizing_1978}.  These design rules were considered in formulating a suitable electrode pattern for optimizing photovoltaic performance and further explain why grid patterns resulted in greater power conversion than a completely opaque electrode pattern.
+
+In general, weak photovoltaic conversion utilizing ZnO absorbers under ultraviolet illumination has been reported previously  \citep{nakano2008transparent, amiruddin2016role}.  Additionally, studies on (a) photovoltage on ZnO surface using time-resolved Kelvin probes \citep{li_characterization_2009} and (b) majority carrier-based, Schottky solar cells with high E$_{g}$ absorber \citep{yang_impact_2016} have alluded to the inherent relationship of work function to typical photovoltaic conversion mechanisms  \citep{kasap_principles_2017}.  However, as observed throughout Fig. \ref{fig:fig4_3}, the lack of photovoltaic conversion for MS diodes suggest the presence of recombination centers at the metal-semiconductor interface.  Moreover, in contrast to a pn diode that is a minority carrier controlled device, the saturation current (I$_{0}$) in an MS diode, a majority carrier device, becomes a major limitation for the improvement of solar cell performance.  Therefore, the integration of a sufficiently thin insulating layer on ZnO effectively passivates the interface \citep{fonash_solar_2010} and reduces (I$_{0}$), while allowing minority carriers to tunnel through the insulator.  In forward bias, the field drives minority carriers toward the interfacial barrier prior to tunneling, while majority carriers are driven away from the interface.  When considering the post-metallization oxidation of Ag/SiO$_{2}$/ZnO (MIS) devices, the formation of p-Ag$_{2}$O surface electrodes transforms device configurations into p-i-n heterojunctions, which more precisely models measured I-V photoresponse.  The transport mechanism for such heterojunction  devices is illustrated in Fig. \ref{fig:fig4_1}(d) in the case of Ag$_{2}$O in contact with a thin EBL on ZnO.  The sufficiently thin EBL results in increased effective barrier potential, as noted in Fig \ref{fig:fig4_4}(a), and reinforces the relationship between the effective barrier potential and V$_{oc}$.  The integration of an additional layer of TiO$_{x}$ further reduces the recombination rates and improves the solar cell characteristics, as illustrated in Fig. \ref{fig:fig4_5}(c,d).  Indeed as previously reported for Si MIS-based cells, an interfacial layer up to approximately 20 \AA{} in thickness reduces dark current (due to suppressed majority electrons) while minimally affecting the short circuit current (due to tunneled minority holes), and locally maximizing V$_{oc}$ \citep{card_photovoltaic_1977}.   Considering the relatively large D$_{it}$ estimated for ZnO thin film in this study (Table \ref{tab:tbl_4_1}), as well as the small grain size observed in Fig. \ref{fig:fig4_2}(a), the effectiveness of EBL in reducing the trap states is noteworthy.  The thin-film integration of additional oxide layers and interfaces coupled with the EBL on ZnO introduces confounding complexities and difficulties in interpretations; for example, under dark and illuminated conditions, recombination (and generation rates under light) is field and spatially dependent, but unknown for these systems.  All I-V photoresponse presented throughout Fig. \ref{fig:fig4_5} clearly indicate that photocurrent is voltage and oxide layer-dependent, and therefore, the principle of superposition is not applicable. Although this preliminary work qualitatively describes the experimental data, a more robust analysis (similar to that presented in \citep{card_photovoltaic_1977}) must be undertaken.  Specifically, numerical and/or analytical models of the multi-layered oxides coupled with relevant parameters (e.g., energy levels of interface states and defects, spatially-dependent recombination and generation rates, oxide-dependent carrier lifetimes etc.) must be developed to compare against experimental and simulated UV photovoltaic current-voltage responses.
+
+\section{Conclusion}
+This preliminary study reports the photovoltaic response of sputtered ZnO (2\% Mn) films integrated with metal or semiconductor contacts, and/or majority carrier blocking layers (i.e., in MS, MIS, and p-i-n heterojunction configurations) for visibly transparent, low-power applications such as window-integrated photovoltaics and electrochromic devices. For MS Schottky devices, a high interface state trap density (D$_{it}$ $\approx$ 8.0$\times$10$^{11}$ eV$^{-1}$cm$^{-2}$), estimated by fitting the dark current-voltage response to the generalized Bardeen Model, warranted ZnO surface passivation. Nonetheless, the photodetection performance and noise response of MS devices were assessed with respect to the nature of contacts, i.e., Schottky (Au, Ag, and Ti/Ag) versus ohmic (Al). Under UV-A illumination, the Ag-ZnO detectors exhibited the highest performance, with responsivity (R) and photoconductive gain (G) of 1.93$\times$10$^{-4}$ A/W and 6.57$\times$10$^{-4}$, respectively.  Post-metallization oxygen plasma treatment of Ag or Ag/Ti electrodes, coupled with inferential matched pair analysis, indicated significant increases in effective Schottky barrier heights, as well as the formation of semiconducting Ag$_{2}$O and TiO$_{x}$/Ag$_{2}$O at the interfaces.  For such devices with patterned interdigitated electrodes, the photovoltaic response of Ag$_{2}$O/TiO$_{x}$/SiO$_{2}$/ZnO layers (modeled as a p-i-n heterojunction) under UV-C illumination indicated a short circuit current density (J$_{sc}$) and a relatively high open circuit voltage (V$_{oc}$) of 0.68 mA/cm$^2$ and 1.2 V, respectively.  These results are attributed to the presence of additional quasi-neutral and space charge regions for optical generation of charge carriers, and the promotion of minority carrier tunneling and surface passivation by the optimally determined 2 nm SiO$_{2}$ blocking layer.  Much work remains to quantitatively account for the (a) voltage-dependent and site-dependant recombination losses, (b) carrier recombination at contacts, (c) photocurrent sign change, and (d) spatial dependence of the generation and recombination across the multilayered structures in order to model the photovoltaic I-V response (with accurate transport parameters) under high-energy UV illumination.  However, this initial study indicates the potential of all-inorganic, visibly transparent, current-matched and voltage-matched ZnO-based UV absorbers for low-power, smart window-integrated photovoltaic devices.

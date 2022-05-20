@@ -1,0 +1,222 @@
+\chapter{Empirical Modeling of Photo-Enhanced Current-Voltage Hysteresis in PEDOT:PSS/ZnO Thin Film Devices}
+
+\section{Abstract}
+
+Organic/inorganic "hybrid" semiconducting devices of zinc oxide (ZnO) thin films coated with poly (3,4-ethylenedioxythiophene):poly(4-styrenesulfonate) (PEDOT:PSS) were fabricated and electrically characterized.  These devices exhibited photostimulated current-voltage (I-V) hysteresis behavior, in which dissimilar electrical current is observed based on the voltage sweep direction, notably as a function of the illuminated wavelength exposed on the device surface during electrical characterization. Ultraviolet-induced oxygen desorption on the ZnO surface, leading to electrons transitioning into the conduction band, gives rise to an increase of accumulated charges between the PEDOT:PSS and ZnO layers.  This effect, coupled with trap states within PEDOT:PSS films, produces a hysteresis effect that is amplified by photoconduction.  Characteristic I-V hysteresis was empirically modeled under a series of first-order multiple linear regression (MLR) expressions that decouple device processing and device characterization conditions.  These models unravel and describe the numerical markers of hysteresis measured across the organic layer, including scaled and shifted transformations.  The results of this analysis indicate that illumination is statistically a stronger explanatory variable for hysteresis than device size, which further suggests that stored space charges on the metal/polymer interface more significantly influence hysteresis than trapped charges alone. 
+
+
+\section{Introduction}
+Organic conductive polymers have become integral to the growth of materials for flexible memory devices, such as "write-once, read-many" devices, potentially realizing low-cost memristive applications.  As a highly effective hole transport material for organic photovoltaic and light emitting applications, poly(3,4-ethylenedioxythiophene) polystyrene sulfonate (PEDOT:PSS) has been extensively studied due to its tunable conductivity, solubility in water, transparency in the visible spectrum, and a high work function \citep{nakano_schottky_2007, lin_comment_2008}.  However, a particular artifact of spin-on PEDOT:PSS film-based devices is the presence of hysteresis in current-voltage (I-V) characteristics \citep{arena_electrical_2007, ambrico_hysteresis-type_2010, lin_hysteresis-type_2008}, to which these discrepancies, for photovoltaic applications, can create highly inflated power conversion efficiencies.  Studies of Peroskovite and other hybrid organic solar cells have established that the level of power generation can often be ambiguous when the voltage scan rate exceeds the time-scale required for the device to reach electronic steady state \citep{unger_hysteresis_2014, snaith_anomalous_2014}.  This phenomenon has been attributed to the presence of deep trap states within the organic layer, as well as stored space charges on the metal/polymer interface.  Lin et al performed a controlled study of ITO/PEDOT:PSS devices, and described displacement current in terms of a differential model that related applied voltage, device area, and voltage sweep rate to the observed hysteresis \citep{lin_hysteresis-type_2008}.  This displacement current model has largely been applied to analyze open-hysteresis behavior (where the forward and reverse current-voltage characteristic do not intersect), while lacking specificity for pinched hysteresis (where the current intersects at or near the origin on the forward and return path, and which is necessary for memristor classification) \citep{chua_if_2014}.
+
+Although the mechanics governing transport in PEDOT:PSS have been explored extensively, few thorough attempts have been made toward numerically modeling such complex hysteresis behavior.  Hysteresis response can manifest from a wide variety of processing conditions and device structure considerations, such as the choice of substrate, surface electrode, and PEDOT:PSS conductivity (as varied through solid content).  Additionally, various conditions during characterization such as the spectra of illumination exposure, latent dwell time, and the number of repeated measurements on the same device can modify the PEDOT:PSS chemical structure, thereby having a significant effect on the shape and position of the hysteresis profile.  Understanding the relative significance of factors that contribute to I-V hysteresis in PEDOT:PSS film-based devices provides a framework toward optimizing and diagnosing performance degradation in hybrid organic/inorganic optoelectronic devices.  
+
+In this study, a combinatorial experimental approach was used to generate a series of first-order empirical models from sets of extracted I-V hysteretic parameters, utilizing a multiple linear regression (MLR) methodology.  Stepwise model selection techniques were employed to form a decision criteria toward filtering potential explanatory variables.  The refined models were used to decouple the magnitude of relative effects of material, processing, and testing conditions on the hysteretic I-V behavior of PEDOT:PSS/ZnO thin film-based devices.
+
+
+
+
+\section{Experimental Details}
+Highly doped Si (p-type boron doped 20 m$\Omega$-cm) and indium tin oxide (ITO, Delta Technologies, CG-61IN) were prepared by immersing in Piranha (70\% sulfuric acid, 30\% hydrogen peroxide) for 10 minutes and buffered oxide etchant (2\% hydroflouric acid) for 5 minutes.  A 1 $\mu$m  ZnO electron transport layer was deposited via magnetron sputtering system (Lesker PVD 250) atop the substrates. An oxygen plasma treatment (200 W for 15 minutes, Tegal Asher) was applied to substrates and ZnO thin films prior to spin coating in order to clean and passivate coated surfaces.  Two conductive grades of PEDOT:PSS---Heraeus-Clevios PH 500 (1.0-1.3\% solid content) and P VP AI 4083 (1.3-1.7\% solid content)---were spun onto Si and ITO/SiO$_{2}$ substrates at 5000 rpm for 30 seconds, and were subsequently hotplate-baked at 160 $\degree$C for 5 minutes, each.  Metallization was performed with an electron beam evaporator system (CHA 600-SE) with Al, Au, and Ag contacts, with five sets of circular patterns from ascending diameters of 300 - 700 $\mu$m.  A schematic of device configurations and energy band diagrams are shown in Figure \ref{fig:fig5_1}.
+
+Post-fabrication, vertical capacitance-voltage (C-V) measurements were conducted with a mercury probe system (Materials Development Corporation) with an attached LCR meter (HP4284).  Current-voltage (I-V) characteristics were collected with a semiconductor analyzer system (Keithly 4200). Electrical testing was conducted under varying illumination conditions: dark, halogen broad band white light (Princeton Instruments TS-425), and monochromatic ($\lambda$=365 nm) ultraviolet (UVP EL Series). Characterization was also conducted under three different voltage sweep rates: 38.5 mV/s, 50 mV/s, 71.42 mV/s. The devices were allotted a latent "wait" period of approximately 5 minutes between measurements to stabilize response from prior measurements.  Additionally, the effect of voltage amplitude, repeated bias stress, and dormant time between characterization was studied by varying applied voltage from [-3,3] V and [-5,5] V, repeating 10 voltage sweeps, and re-measuring after two years from a representative subset of devices, respectively.  Exploratory analysis was first undertaken to screen for hysteresis behavior.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.46]{figures/fig5_1}
+\caption{Device Structure Schematic and Band Diagram of PEDOT:PSS/ZnO devices for (a) Si and (b) ITO Substrates}
+\label{fig:fig5_1}
+\end{figure}
+
+From each measurement, a set of parameters were exhaustively extracted in order to devise a descriptive empirical model correlating the variation of hysteresis parameters as a function of processing and characterization conditions.  These parameters included the intersection point of the forward and return sweep, the loop areas formed from the portions left and right of the intersection (numerically determined with a composite Simpson's 3/8 technique), and the axes intercepts: V$_{oc+}$, V$_{oc-}$, I$_{sc+}$and I$_{sc-}$, in which a positive subscript refers to a forward sweep, and a negative subscript refers to a reverse sweep (numerically determined with a modified Secant method).  The extracted parameters were tabulated and treated as response variables, while the fabrication and testing conditions were treated as explanatory variables.  Due to the large number of regressors, a first iteration of main effects were explored, and a series of stepwise model selection parameters including adjusted R$^{2}$ (forward and backward), Mallow's CP, and Baysian Information Criteria (BIC) were evaluated to compare models and to reduce the dimensionality of predictors.  A refined model was generated and analyzed with the remaining regressors for each subset of hysteresis response variables. Post-processing of data, which included data set transformation, parameter extraction, model generation, model selection, and model visualization were performed in R language with the ggplot2 library.
+
+\section{Results and Discussion}
+\subsection{Exploratory Data Analysis}
+
+The degree of observed hysteresis, absent of illumination, was found to be a strong function of device size, voltage scan rate, and voltage amplitude, as illustrated in Figure \ref{fig:fig5_2} (a), (b), and (c) respectively.  The asymmetric current response between forward and reverse bias can be explained by the formation of a Schottky barrier with PEDOT:PSS in the case of Al, leading to rectifying behavior and suppressed conduction for negative bias.  As noted by others \citep{lin_hysteresis-type_2008, moujoud_indium_2009, ambrico_hysteresis-type_2010}, this behavior has been explained in terms of the displacement current model, which relates the total current ($\sum$I) in terms of the linear sum of the resistive component (I$_{r}$) and the displacement component (I$_{d}$), as shown in equation (\ref{eq:5_1}).
+
+\begin{equation} \label{eq:5_1}
+\sum I = I_{r} + I_{d} = I_{r} + (V \frac{dC}{dt} + C \frac{dV}{dt}) 
+\end{equation}
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.46]{figures/fig5_2}
+\caption{Current-Voltage Measurements of PEDOT:PSS device with modified (a) device size (b) voltage sweep rate (c) amplitude}
+\label{fig:fig5_2}
+\end{figure}
+
+As device area (which is directly proportional to device capacitance) increases, displacement current increases, as shown in Figure \ref{fig:fig5_2}(a), and is modeled by varying C in equation (\ref{eq:5_1}).  Lin et al. concluded that separation distance between electrodes directly affected the degree of hysteresis exhibited, due to a larger density of trapped charges contributing to displacement current.  The effect of voltage scan rate is considered in the model as $\frac{dV}{dt}$, and its relative effect on hysteresis is experimentally confirmed in this analysis; illustrated in Figure \ref{fig:fig5_2}(b).  The fastest measured scan rate (71.42 mV/s) exhibited the greatest oscillatory behavior, which is an indication of a significant density of interface trap states.  Carrier trapping and detrapping within the organic layer has been known to create large time constants for measured current to reach equilibrium, and these trap states are unable to unfill trap charges rapidly enough in relation to the scan rate of the voltage sweep \citep{ambrico_hysteresis-type_2010, schroder_semiconductor_2015}. Another indicator of interface trap charges is from a shifted capacitance-voltage (C-V) profile (\ref{fig:s_5_1}), which distorts and transforms due to the contribution of the interface trap capacitance \citep{schroder_semiconductor_2015}.  Finally, a larger hysteresis loop is observed with larger voltage amplitude, which is illustrated in in Figure \ref{fig:fig5_2}(c), and is considered in the voltage (V) term from equation (\ref{eq:5_1}).  Under the displacement current model, space charge accumulation at the metal/polymer interface is prevalent, thereby screening the electric field and limiting carrier injection.  These observations are in agreement with prior studies indicating that the density of stored charges is a function of the amplitude of the voltage applied, as higher potential differences allow deeper interface states to become occupied \citep{majumdar_memory_2002}. Thus, the combination of these controlled factors confirm the general behavior of the displacement current model, in which larger charge accumulation area, with deeper trap states and less mobile trap charges increases the level of hysteresis observed.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.78]{figures/s_5_1}
+\caption{Shifted Capacitance-Voltage measurements of devices (Non-Conductive PEDOT:PSS, Au electrode, ITO Substrate)}
+\label{fig:s_5_1}
+\end{figure}
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.66]{figures/fig5_3}
+\caption{Current-Voltage Measurements of PEDOT:PSS device as a function of illumination for (a) Al and (b) Au contacts}
+\label{fig:fig5_3}
+\end{figure}
+
+A limitation of the displacement current model is the lack of specificity regarding illumination.  In this study, increased hysteresis was observed under illumination, relative to dark conditions, with both broadband white light and monochromatic UV irradiation, as illustrated in Figure \ref{fig:fig5_3}(a) for Al top electrode and Figure \ref{fig:fig5_3}(b) for Au top electrode on conductive PEDOT:PSS devices.  While other studies note that UV treatment of PEDOT:PSS decreased the number of charge trapping defects and increased conductivity of the PEDOT:PSS \cite{chin_effects_2010}, the magnetude of displacement current, in this work, is found to amplify with illumination.  A marker for the reduced density of trap states manifests when comparing differential resistance under illumination, in which the devices exhibited strong oscillatory characteristics when measured in the dark, but this behavior is suppressed under UV illumination (\ref{fig:s_5_2}).  Reduced oscillations may reconcile why devices had greater conductivity and stability post-illumination.  
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.92]{figures/s_5_2}
+\caption{(a) Current-Voltage characteristics and (b) Differential Resistance of device (Conductive PEDOT:PSS, Au electrode, Si Substrate) illustrating degree of oscillatory behavior indicating reduced trap states with illumination}
+\label{fig:s_5_2}
+\end{figure}
+
+The hysteresis effect from space charge storage and traps states is found to persist over two years of storage in air (\ref{fig:s_5_3}) as I-V characteristics exhibit reduced conductivity, in addition to increased oscillatory behavior.  Over time, ambient moisture chemically binds to PEDOT:PSS, increasing the density of trap states \cite{moujoud_indium_2009, moujoud_mechanism_2010}.  Despite the dormant chemical modification of PEDOT:PSS, illumination is still found to produce a net increase in measured hysteresis, suggesting that charge accumulation along the ZnO/PEDOT:PSS interface and into the space charge region dominates over reduced trap states in the PEDOT:PSS layer alone \citep{ambrico_hysteresis-type_2010}.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.84]{figures/s_5_3}
+\caption{Degradation of PEDOT:PSS device conductivity for dark and illuminated test conditions over time.  Note increased hysteresis behavior and reduced oscillatory behavior with UV illumination.}
+\label{fig:s_5_3}
+\end{figure}
+
+\subsection{Descriptive Analysis and Modeling}
+
+A series of first order multiple linear regression (MLR) models were generated to decouple the relationship between numerical markers for hysteresis and their underlying relative underlying causes stemming from device processing and characterization considerations.  Due to its fairly anomalous behavior, which has been attributed to several factors including polarized and mobile ions \citep{richardson2016can, meloni2016ionic}, a theoretical model that perfectly describes I-V hysteresis across organic polymers is highly impracticable, especially if derived from Fermi-Dirac statistics for solid-state semiconductors.  This analysis, instead uses an empirical parametric least squares approach toward estimating first-order response (magnitude and sign) from the set of probable factors that contribute to hysteresis.  While hysteretical responses would be expected to locally optimize, as uncovered through Response Surface Methodologies (RSM), axial (face-centered) experimental points were not considered in this study, lending less statistical power to model specifications including interaction and higher order terms.  A simplistic first order linear specification is reported due to the constrained nature of the experimental exploration space---predominately due to the range of device sizes available during fabrication.  As determined through experimental screening, stepwise model selection, and model refinement, the factors of \textit{Device Area} and \textit{Illumination} accounted for most of the variation of the hysteresis loop parameters (see Supporting Information). Additionally, all other explanatory variables in each model were treated as categorical (with an unambiguous evolution in hysteresis response from each categorical level). The estimators for each set of model parameters are tabulated, and the results are visualized for each numerical hysteresis response marker, along with an overlayed 95\% confidence interval.
+
+\subsubsection{Current and Voltage Axis Intercepts}
+
+The short circuit current (I$_{sc}$, graphically defined as the intercept along the current axis) and open circuit voltage (V$_{oc}$, graphically defined as the intercept along the voltage axis) were tabulated and modeled for both forward and reverse I-V sweeps.  Included in this model are device subsets composed of non-conductive PEDOT:PSS with Al and Au contacts  (Note: all other characterized subsets intercepted the origin and therefore did not exhibit an appreciable I$_{sc}$).  These results are summarized throughout Figure \ref{fig:fig5_4}.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.78]{figures/fig5_4}
+\caption{Short Circuit Current (I$_{sc}$) for (a) forward and (b) reverse traces and Open Circuit Voltage (V$_{oc}$) for (c) forward and (d) reverse traces as a function of device size, illumination, and contact electrode}
+\label{fig:fig5_4}
+\end{figure}
+
+The variation of I$_{sc}$ is illustrated in Figure \ref{fig:fig5_4} (a) for forward (I$_{sc+}$) and (b) for reverse (I$_{sc-}$) I-V traces.  As previously noted, the magnitude of I$_{sc}$ predominately increases as a function of contact size and illumination.  For a conventional diodic solar cell, the total current is expressed as a linear combination of drift/diffusion transport, displacement current, and an illumination current (I$_{L}$), as shown in equation (\ref{eq:5_2}) and (\ref{eq:5_3}), and each component is a strong function of device area \citep{sze_physics_2006}.
+
+\begin{equation} \label{eq:5_2}
+I = I_{s}[exp(\frac{qV}{kT})-1] + (V \frac{dC}{dt} + C \frac{dV}{dt})-I_{L}
+\end{equation}
+
+where illuminated current is:
+\begin{equation} \label{eq:5_3}
+I_{L} = Aq\int_{h\nu=E_{g}}^\infty \frac{\mathrm{d}\Phi}{\mathrm{d}h\nu}\,\mathrm{d}h\nu
+%A*q*integral(dPHI/dhv,hv,hv=Eg,inf) 
+\end{equation}
+
+However, absent of illumination, this increase is less pronounced, suggesting that the variability of I$_{sc}$ is a stronger function of I$_{L}$ and I$_{d}$ interacting, rather than to I$_{d}$ alone.  Broad band white light illumination consistently results in less short circuit current than UV illumination, because as noted in equation (\ref{eq:5_3}), the integral of total incident light flux only considers wavelengths greater than the band edge energy of ZnO.  Illumination at h$\nu$ $\geq$ E$_{g(ZnO)}$ is a stronger driver for I$_{sc}$ precisely because photo-generated carriers inject into the organic layer, and occupy trap states before able to sweep across the depletion region.  As a result, carriers accumulate at the metal-polymer interface, shifting the total current away from equilibrium (dark) levels.
+
+A summary of extracted open circuit voltages are presented in Figure \ref{fig:fig5_4} (c) for forward (V$_{oc+}$) and (d) reverse (V$_{oc-}$) traces, subsetted by contact electrode.  In all cases, the effect of illumination (progressing from dark, to white light, to UV) increases the magnitude of the V$_{oc}$ measured.  However, the direction of voltage sweep in correspondence with the device size and metal work function, affects whether the magnitude of V$_{oc}$ increases or decreases.  With Au, the magnitude of V$_{oc+}$ increases (becomes more negative) with increasing device size, however, in the reverse case, V$_{oc-}$ decreases, corresponding to a left-shift of the hysteresis loops.  For Al, the opposite effect is observed: with increasing device sizes, the forward trace (V$_{oc+}$) is observed to increase while the reverse trace (V$_{oc-}$) decreases; and the net transformation is a right-shift in the hysteresis profile.  Assuming a metal-semiconductor interface in which thermionic emission dominates, the effect of superposition from illumination can be described as \citep{sze_physics_2006, fonash_solar_2010}: 
+\begin{equation} \label{eq:5_4}
+V_{oc} = \phi_{B}+\frac{kT}{q}ln(\frac{J_{sc}}{A^{*}T^{2}}) \approx \phi_{B}+\frac{kT}{q}ln(\frac{I_{L}}{I_{s}}) = \phi_{B}+\frac{kT}{q}[ln(I_{L}) - ln(I_{s})]
+\end{equation}
+
+From equation (\ref{eq:5_4}) V$_{oc}$ is both a function of the Schottky barrier height ($\phi_{B}$), and saturation current (I$_{s}$).  Despite similar Schottky barrier heights, the negative dipole from the PEDOT:PSS surface, in tandem with Al (anodic index $\approx$ 0.9 V) having a dissimilar nobility to that of Au (anodic index $\approx$ 0 V), modifies the ratio of I$_{L}$ to I$_{s}$.  Thus, the difference between saturation and illuminated current, stemming from the relative positions of the top metal electrodes along the Galvanic series, reverses the coordination of V$_{oc}$ shift \citep{ya-bin_pedot:pss_2011, nakano_schottky_2007}.  
+
+The empirical MLR model describing the relationship of each directional intercept is shown in equation (\ref{eq:5_5}) with model estimator coefficients in Table \ref{tab:tbl5_1} (Note: \textit{Contact} and \textit{Illumination} are treated as dummy variables referenced to \textit{Al} and \textit{Dark} levels, respectively).
+\begin{equation} \label{eq:5_5}
+\left.
+\begin{array}{l}
+I$_{sc}+$\\&I$_{sc}-$\\&V$_{oc}+$\\&V$_{oc}-$
+\end{array}
+\right\} = \beta_{0} + \beta_{1} \times Contact(Au) + \beta_{2} \times Illum.(Light) + \beta_{3} \times Illum.(UV) \\+ \beta_{4} \times DeviceSize
+%\label{formulas} 
+\end{equation}
+
+\begin{table*}[h]
+\centering
+%p{5cm} is the space given to wrap the text
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c || c | c | c | c | c}
+\centering
+Response & $\hat{\beta_{0}}$ & $\hat{\beta_{1}}$ & $\hat{\beta_{2}}$ & $\hat{\beta_{3}}$ & $\hat{\beta_{4}}$\\
+\hline \hline
+I$_{sc}+$ & \makecell{-3.645 \times 10^{-10} \\ *** \\ (8.064 \times 10^{-11})} & \makecell{3.019 \times 10^{-10} \\ *** \\ (5.852 \times 10^{-11})} & \makecell{ 2.058 \times 10^{-10} \\ ** \\ (7.482 \times 10^{-11})} & \makecell{ 3.673 \times 10^{-10} \\ *** \\ (7.054 \times 10^{-11})} &  \makecell{ 1.761 \times 10^{-7} \\ *** \\ (2.515 \times 10^{-8})} & \hline{}
+I$_{sc}-$ & \makecell{3.416 \times 10^{-10} \\ * \\ (1.294 \times 10^{-10})}  & \makecell{-4.901 \times 10^{-10} \\ *** \\ (9.391 \times 10^{-11})} & \makecell{-5.188 \times 10^{-10} \\ *** \\ (1.150 \times 10^{-10})} & \makecell{-1.312 \times 10^{-9} \\ *** \\ (1.150 \times 10^{-10})} &  \makecell{-2.067 \times 10^{-7} \\ *** \\ (4.197 \times 10^{-8})} & \hline{}
+V$_{oc}+$ & \makecell{0.06626 \\    \\ (0.12584)} & \makecell{-0.63629 \\ ***   \\ (0.09132)} & \makecell{-0.02882 \\    \\ (0.11676)} & \makecell{ 0.10762 \\    \\ (0.11008)} &  \makecell{97.22499 \\ *    \\ (39.24511)} & \hline{}
+V$_{oc}-$ & \makecell{0.88797 \\ ***  \\ (0.06609)} & \makecell{0.18099 \\ ***  \\ (0.04796)} & \makecell{   0.28652 \\ ***  \\ (0.06132)} & \makecell{   0.58511 \\ ***  \\ (0.05781)} &  \makecell{-220.13372 \\ ***  \\ (20.61129)} &
+\end{tabular}}
+\caption{Model estimators of current and voltage intercepts for reverse and forward traces.  Standard error of the coefficient reported in parenthesis below coefficient.  Note: asterisks after the coefficients indicates the level of statistical significance as follows: *** indicates the coefficient is statistically different from zero at the 1\% level, ** at the 5\% level, and * at the 10\% level.}
+\label{tab:tbl5_1}
+\end{table*}
+
+\subsubsection{Current and Voltage Intersection}
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.66]{figures/fig5_5}
+\caption{Intersection (a) voltage and (b) current between forward and reverse traces as a function of illumination and device size}
+\label{fig:fig5_5}
+\end{figure}
+
+The point of intersection between forward and reverse sweeps was extracted for all PEDOT:PSS devices that exhibited pinched hysteresis.  Ideally, this intersection should occur at the origin, however a subset of devices (Si substrate, non-conducting PEDOT:PSS, and Au top contact) exhibited shifted intersection voltage and intersection current.  These results are illustrated in Figure \ref{fig:fig5_5}, and the model describing the intersection behavior are presented equation (\ref{eq:5_6}) with model estimator coefficients in Table \ref{tab:tbl5_2}.
+\begin{equation} 
+\left.
+\begin{array}{l}
+I$_{intersection}$\\&V$_{intersection}$
+\end{array}
+\right\} = \beta_{0} + \beta_{1} \times Illum.(Light) + \beta_{2} \times Illum.(UV) +\\& \beta_{3} \times DeviceSize
+\label{eq:5_6} 
+\end{equation}
+
+\begin{table*}[b]
+\centering
+%p{5cm} is the space given to wrap the text
+\begin{tabular}{l || c | c | c | c }
+\centering
+Response & $\hat{\beta_{0}}$ & $\hat{\beta_{1}}$ & $\hat{\beta_{2}}$ & $\hat{\beta_{3}}$\\
+\hline \hline
+I$_{intersection}$ & \makecell{-5.926 \times 10^{-10} \\  \\ (3.691 \times 10^{-10})}& \makecell{1.008 \times 10^{-9} \\ * \\ (3.520 \times 10^{-10})}& \makecell{4.195 \times 10^{-9} \\ *** \\ (3.520 \times 10^{-10})}& \makecell{ 6.926 \times 10^{-7} \\ *** \\ (1.284 \times 10^{-7})} & \hline
+V$_{intersection}$ & \makecell{   1.57703 \\ *** \\ (0.05891)}& \makecell{0.214 \\ ** \\ (0.05619)}& \makecell{0.436 \\ ***  \\ (0.05619)}& \makecell{-158.40232 \\ *** \\ (20.50364)} & 
+
+\end{tabular}
+\caption{Model estimators for intersection points between reverse and forward traces.  Standard error of the coefficient reported in parenthesis below coefficient.  Note: asterisks after the coefficients indicates the level of statistical significance as follows: *** indicates the coefficient is statistically different from zero at the 1\% level, ** at the 5\% level, and * at the 10\% level.}
+\label{tab:tbl5_2}
+\end{table*}
+
+Both intersection current and intersection voltage increase for each illumination level, but intersection voltage decreases and intersection current increases  with device size, respectively.  Previous exploration of non-zero intersection behavior has been linked an interaction of distinct memory effects (namely memristive, memcapacitive, and meminductive) to the quadrant in which the intersection occurs \citep{di_ventra_memory_2011, qingjiang_memory_2014}.  Because non-conductive PEDOT:PSS has a greater density of trap states, the memcapacitance effect will be more pronounced for greater device area. Here, the competing reduction of the intersection voltage, with an increasing intersection current lead to an overall increase of deviation from the origin (0 V, 0 A).  Shifting into the first quadrant indicates that a stronger memcapacitance effect will be expressed with increasing device area and illumination levels.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.78]{figures/fig5_6}
+\caption{Loop Area between forward and reverse traces for (a) Si and (b) ITO substrates as a function of device size and illumination, subsetted by contact metal and PEDOT:PSS conductivity. (Note: C and NC refer to conductive and non-conductive PEDOT:PSS respectively)}
+\label{fig:fig5_6}
+\end{figure}
+
+\subsubsection{Loop Area}
+
+The total loop area represents an extraction of the area between forward and reverse traces of the I-V measurements.  Figure \ref{fig:fig5_6} shows the extracted loop areas for devices on (a) Si and (b) ITO, subsetted by metal electrode and PEDOT:PSS conductivity.  The MLR model describing the total loop area is expressed in equation (\ref{eq:5_7}) with model estimator coefficients enumerated in Table \ref{tab:tbl5_3}.
+\begin{equation} \label{eq:5_7}
+\begin{aligned}
+Total Area = \beta_{0} + \beta_{1} \times Substrate(Si) + \beta_{2} \times Grade(NC) + \beta_{3} \times Contact(Au) \\
+ + \beta_{4} \times Illum.(Light) + \beta_{5} \times Illum.(UV)
+ + \beta_{6} \times DeviceSize
+\end{aligned}
+\end{equation}
+
+\begin{table}[t*]
+%p{5cm} is the space given to wrap the text
+\centering
+\begin{tabular}{l | c }
+Estimator&Coefficient\\
+\hline \hline
+ $\hat{\beta_{0}}$  & \makecell{ 5.833 \times 10^{-5}  \\ **	\\ (2.228 \times 10^{-5})}& \hline
+ $\hat{\beta_{1}}$  & \makecell{ -1.547 \times 10^{-4}  \\ *** \\ (1.464 \times 10^{-5})}& \hline
+ $\hat{\beta_{2}}$  & \makecell{  6.721 \times 10^{-5} \\ *** \\ (1.464 \times 10^{-5})}& \hline
+ $\hat{\beta_{3}}$ 	& \makecell{ -1.093 \times 10^{-5} \\  \\ (1.462 \times 10^{-5})}& \hline
+ $\hat{\beta_{4}}$ 	& \makecell{  2.706 \times 10^{-5} \\ \\ (1.780 \times 10^{-5})}& \hline
+ $\hat{\beta_{5}}$ 	& \makecell{  6.565 \times 10^{-5} \\ *** \\ (1.803 \times 10^{-5})}& \hline
+ $\hat{\beta_{6}}$ 	& \makecell{  1.566 \times 10^{-2} \\ * \\ (6.532 \times 10^{-3})}&
+\end{tabular}
+%\{\center}
+\caption{Model estimators for Total Hysteresis Loop Area.  Standard error of the coefficient reported in parenthesis below coefficient.  Note: asterisks after the coefficients indicates the level of statistical significance as follows: *** indicates the coefficient is statistically different from zero at the 1\% level, ** at the 5\% level, and * at the 10\% level.}
+\label{tab:tbl5_3}
+\end{table}
+
+In most cases the total loop area increases for every increase in device area, and with each progressive illumination level.  The exceptions to this include conductive PEDOT:PSS with a Si substrate and Au top electrodes, as well as ITO substrates with Al top electrodes.  In the case of the former, hysteresis is suppressed with increasing device size, and in the case of the latter, it is suppressed with increasing illumination levels.  For the first exception, a cathodic material over heavily doped n-type Si, as well as larger device area, increases conduction paths for carriers through the conductive PEDOT:PSS medium, thereby increasing the rate at which carriers can de-trap.  The second exception is found for Al on ITO, in which the combination of an anodic contact over a p-type substrate reduces hysteresis in current traces, as carriers photo-generate from the ZnO layer.  Both phenomena have the net effect of suppressing hysteresis, thereby reducing the total area measured within the I-V loops.
+
+\section{Conclusion}
+
+In this work exploratory analysis and numerical modeling of hysteresis behavior in current-voltage characteristics of PEDOT:PSS films have been investigated.  Several device processing parameters and characterization conditions have been confirmed to affect I-V hysteresis, and these factors were assessed in terms of displacement current theory.  A comprehensive series of specified parametric MLR empirical models describing the scale and direction of hysteresis profile transformation (e.g. loop area and functional shifting) have been generated and analyzed. With an extended experimental exploration space, processing parameters could conceivably be investigated to minimize hysteretical response as a design objective.  Evaluated in terms of fundamental electronic transport, these models provide a predictive framework for estimating general transformations of hysteresis behavior from the I-V characteristics of hybrid organic/inorganic semiconducting polymers.  This work represents a principle undertaking in developing hysteresis mitigation objectives through a deeper understanding of how the studied processing and characterization factors interact to form the resultant hysteresis.

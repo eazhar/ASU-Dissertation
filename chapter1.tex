@@ -1,0 +1,383 @@
+\chapter{INTRODUCTION}
+\doublespace
+
+
+
+\section{Motivation}
+
+\subsection{Energy Challenges}
+
+The United States Department of Energy (DOE) has served as the guide and motivator for standardizing public knowledge of both energy conservation and surveying new sources for energy.  In fact, the DOE maintains a national residential efficiency measures database that accumulates portions of the households that most prone to radiant and insulating heat.  As recently as 2018, the Energy Information Administration (EIA), a subset of the DOE, estimated that heating and cooling categories represented a majority of the non-pooled studied energy consumption (listed as 'other').  It is estimated that 20-50\% of heat absorption occurs from sunlight radiation through windows \citep{us_department_of_energy_energy_2016}, however, more specifically, it is projected that removing cooling loads from windows totals about 5 quadrillion BTUs and 3 quadrillion BTUs for residential and commercial \citep{eia_eia_2017}, respectively, and this accounted for over 15\% of total energy consumption in the U.S \citep{eia_eia_2017, wong_smart_2013,deforest_united_2015,piccolo_performance_2015}.  Additionally, energy consumption normalized to building sizes indicated that cooling accounted for the highest majority at 25,000 BTUs per square foot \citep{eia_eia_2017}.  In 2001, it was estimated that 1.5 quadrillion BTUs per year amounted to costs of almost \$15 billion \citep{deb2001stand}.  A staggering 2 billion square meters of flat glass is produced worldwide each year \citep{deb2001stand} for the purposes of both residential and commercial windows, and while a small fraction of these windows encompass energy-saving design features (such as low-emissivity coating, argon filling, and vacuum insulation), these solutions still ultimately render the window passive.  Such large areas have massive potential for power generation and integration of self-powered electronics, sensors, and displays while retaining nearly identical optical properties.  Considering the following: a 1 kW PV device can remove heat at approximately 3 kW from a building envelope during cooling, whereas the same device can be used to drive smart windows, averting an estimated electrical consumption rate of 110 kW; resulting in enormous energy savings \citep{us_department_of_energy_energy_2016, deb2001stand}.  With these metrics in mind, smart windows have sensibly received much attention over the years for their potential to be a completely transformative force in reducing energy consumption.  
+
+Electrochromism is a technique that has been been explored by many commercial interests and academic reports.  Transparent surfaces like windows are able to transition between opaque and translucent states through an external potential.  By blocking radiant heat from sunlight, households or other buildings can be insulated properly to reduce cooling loads, with a mechanism that fundamentally uses less power.  Smart windows based on electrochromic mechanisms allow for the variation of transmittance through electrical current, and while the energy required to power and maintain a smart window is only 1/15 the power consumed of a standard nightlight \citep{bailey-salzman_semitransparent_2006, baxter2005nanowire}, smart windows account for an even smaller fraction of total windows manufactured worldwide.  Part of the small demand is attributed to the fact that the product still represents an extremely niche interest.
+
+
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.5]{figures/fig1_1}
+\caption{Visualization of household heat reflection and wearable applications of this work}
+\label{fig:fig1_1}
+\end{figure}
+
+The use of an external power source to operate each window ultimately reduces the freedom of architectural designers, having to accommodate for this requirement.  However, a solution to this problem arrives from the attachment of a solar cell to the smart glass, truly allowing for "off-the-grid" use.  While  the cell may not ultimately power a smart window, the amount of solar energy that drives it may be used to power a variety of other devices.  At AM 1.5G, a power density (P$_{d}$) of 100 W/cm$^{2}$ will be available.  As a conservative estimate, for energy conversion efficiency ($\eta$) of only 1\%, a 1 meter by 1 meter window will potentially generate the following power density: 
+\begin{equation}
+P_{d(1 meter \times 1 meter)} = P_{d} \times \eta 
+\end{equation}
+\begin{equation}
+100 \frac{W}{cm^{2}} \times 1\% = 1 \frac{W}{cm^{2}} = 10,000 \frac{W}{m^{2}} 
+\end{equation}
+i.e., a 1 m$^{2}$ window (which is still a relatively small area) can generate 10,000 W/m$^{2}$.  As previously mentioned, since billions of square meters of glass for windows are manufactured worldwide, the potential payoffs for the incorporation of this smart technology are significant.
+Conventional (monocrystalline Si-based) solar cells on windows suffer mainly from aesthetic drawbacks---their cold, bulky feel may be one issue, but the fact that they ultimately undermine the very purpose of a window (to see what is outside) is a more pressing issue.  Thus, regardless of whether the solar cell is used to power a smart window or simply harvest energy, the cell must be relatively transparent, so as to retain the optical properties of a lucid window.  Reports of optically transparent or semi-transparent Si-based photovoltaics have run into a problem of overall size reduction to less than 100 nm  and 60 nm \citep{bailey-salzman_semitransparent_2006, baxter2005nanowire}; both indicate that this reduced thickness contributes to electrical shorts from the top contact with the PV, making the fabrication of large area devices extremely difficult. 
+
+The U.S. government has already invested considerable resources on "smart" windows, i.e., windows in which light transmission properties can be controlled by an external stimulus.  Previous works have comprised a wide range of technologies to meet these needs, including electrochromic systems \citep{qi_nanocomposite_2001} and even phase change glass materials that respond to heat pulses \citep{lee_advancement_2006}.  However, these techniques require power to generate the desired effect; thus the need for a completely self-powered smart-window system becomes more evident, appealing, and urgent.  A US company in 2006, NTERA Inc., created electrochromic dislayes based on TiO$_{2}$ nanoparticles coated with bis(2-phosphonoethyl)-4,4'-bipyridinium dichloride \citep{moller_self-powered_2010}.  The company was able to achieve a high contrast ratio and fast switching time through the integration of white pigments from ZnO nanoparticles and optically active organic violgen. \citep{corr_coloured_2003}.  In 2007, Swedish company ACREO ITC fabricated flexible electrochromic displays using printed PEDOT:PSS and reported extremely fast switching times \citep{andersson_printable_2007, mannerbro_inkjet_2008, said_electrochromic_2009, kawahara_flexible_2013}.  Another US company, Aveso Inc. (later acquired in 2011 by French Company Gemalto), produced embedded electrochromics for their "smart card" technology, that would randomly generate passkeys on a seven segment display which they donned the One Time Password (OTP) technology.  Based on organic pH indicators such as bromoscrescol purple, the technology created withstood operating times of up to 5 years \citep{babinec_electrochromic_2004}.  In terms of active building integrated electrochromics for glass, a US companies, Sage Windows and View Inc. released an electrochromic window panel which claims moderately fast switching time but at the expense of large power usage.  Most recently, both of their flagship products have included Internet of Things (IoT) remote controlling to adjust daytime opacity.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.5]{figures/fig1_2}
+\caption{Electrochromic and smart windows products from (a) NTERA Inc. \citep{ganapati_ntera_nodate}, (b) Aveso Inc. \citep{noauthor_electrochromic_nodate}, (c) Sage Windows \citep{spivak_smart_2016}, and (d) View Inc. \citep{koerner_view_2014}}
+\label{fig:fig1_2}
+\end{figure}
+
+
+
+\subsection{Flexible Electronics}
+
+A field of major interest in recent years has been the fabrication of integrated circuits, not onto conventional substrates such as silicon (Si), but rather onto flexible, transparent, and even stretchable substrates.  Indeed, tremendous progress has been made in flexible and transparent electronics in the last few years, as demonstrated by the emergence of exciting flexible displays, e-papers, radio frequency identification card (RFID) etc.  This has been feasible due to light weight, compact form factor, conformable, low cost, shock-resistance and potential versatility of multifunctionality.  Beyond just information display, integrated multifunctionality on flexible substrates will certainly drive this field much further.  UV resistant films and polymers used to block harmful radiation from entering buildings have been heavily commercialized.  By itself, the material is simply a passive element, but possesses the capability of integrating many more features including complex transparent circuitry and photovoltaics.  The flexible nature of the device also allows it to be attached to a variety of complex surfaces for smart window applications and energy harvesting.  
+%Coupled with the task of reducing a structure's internally absorbed heat, a completely self-powered smart window eliminates the need for external power sources and further alleviates future energy demands.  
+Conventional approaches for energy harvesting window production concentrate fabrication on rigid Si substrates, a material that is already so brittle that with additional thickness mildly adverse weather conditions may erode these devices if no external encampsulation is in use.  Thus, the need for a flexible, mechanically resilient solar cell becomes more imperative.  Flexible PVs with the required material characteristics certainly further the freedom of architectural designers.  The inclusion of a self-powered stand-alone smart window or solar cell becomes a post-design thought of retrofitting, rather than a burden at the outset. Additionally, the mechanically flexible nature of the device substrate allows for contouring to complex surfaces such as curved windows or even soft fabrics such as a camping tent.  Finally, the growth and popularity of Internet of things (IoT) enabled devices has unified the ability to remotely control the switching characteristics of devices \citep{xia2012internet}.  IoT controllers will be integrated allowing for more robust control use-cases and greater consumer-level interest in such an integrated design.  Realizing its importance in the consumer marketplace, the aforementioned Sage Inc. and View Inc. offer IoT functionality directly onto their electrochromic windows.
+The economic viability of flexible electronics is enhanced by the advent of fabrication techniques such as printing \citep{fan_toward_2009}.  Various techniques such as contact printing or direct printing have allowed for large-scale integration of single-crystal inorganic NWs to be directly placed in specific locations.  These methodologies of collecting such NWs into aggregates of well-ordered arrays have enabled the ability to mass-produce cohesive NW devices in a roll-to-roll fashion; a fabrication process that has the promise of being one of the most cost-effective ways to create a large volume of NW devices on a sheet of flexible substrate.
+Thus, the challenge to achieving self-powered flexible smart windows lie in fabrication of the reliable and reproducible photovoltaic devices for harvesting solar energy and electrochromic devices for shading sunlight.  These devices must also demonstrate robustness (especially when subject to mechanical strain from bending), as well as large-scale, cost effective integration for potential commercialization.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig2_6}
+\caption{Flexible ZnO single-nanowire photodetectors}
+\label{fig:fig2_6}
+\end{figure}
+
+\section{Fundamentals}
+
+
+
+
+\subsection{Metal-Semiconductor-Based Thin Film (Second Generation) Photovoltaics}
+
+Since A.E. Becquerel's discovery of electrical current generation from incident sunlight, Bell Labs' production of the first commercial solar cell in the 50s, and the energy crisis of the 70s, interest in photovoltaic technology had been sparse, and had largely been dominated by monocrystalline Si.  Emerging thin film solar cells from the 90s and early 2000s sought to address the problems with crystalline Si, including high materials costs, as well as processing energy and costs.  Materials for thin film-based cells have included amorphous silicon, CdTe, CIGS, of which introduced much lower processing temperatures and cost.  Within this category, Schottky barrier (or surface barrier) solar cells have too been measured with cell performances comparable to homojunction or heterojunction cells.  Within the enormously prolific field of silicon photovoltaics, even as early as the 70s, silicon based Schottky solar cells were reported to operate just as well as PN junction counterparts in terms of typical performance characteristics (J$_{sc}$, V$_{oc}$, and power conversion efficiencies) in both simulation and experimental studies \citep{fonash_solar_2010}. Surface barrier photovoltaics can have promised even less processing steps and therefore less cost.  Additionally, for materials in which dissimilar doping is exceptionally difficult (for example, ZnO), it is advantageous to implement Schottky-based solar cells. 
+
+Under equilibrium Schottky barrier-based solar cells can be characterized as as the diffusion of photogenerated minority carriers to a narrow surface or Schottky barrier.  The difference between energy levels from differences in density of states create an electrostatic field and break symetry along the semiconductor surface inducing band bending, as shown in Figure \ref{fig:fig1_3}(a).  An insulator layer is introduced between the metal and absorber in order to serve as an electron blocking layer for self-recombination near the semiconductor surface.  Under illumination, electrons are injected by thermionic emission into the metal layer, as illustrated in Figure \ref{fig:fig1_3}(b).
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig1_3}
+\caption{Band diagram of MIS Schottky Photovoltaic Diode in (a) equilibrium and (b) under illumination}
+\label{fig:fig1_3}
+\end{figure}
+
+\subsection{Organic (Third Generation) Photovoltaics}
+
+Despite its promises for better or equal performance at low cost, interest in thin-film cells has been short-lived due to extremely slow development-leaving another category of solar cells to emerge, organics.  In addition to the low cost of thin films, organic materials brought about even lower costs, thinner films, and even lower temperatures. Organic based solar cells have also exploded to an infinite variations of materials, material compositions, layer stacking, architecture, and even substrate independence, despite its poor stability.  However, the combination of performance and production costs of previous generation solar cells are not scalable to the gigawatt or even terawatt scale, which has led many researchers to explore organic cells with great depth.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.7]{figures/fig1_10}
+\caption{Comparison of power conversion efficient of dominant photovoltaic technology with organic solutions circled \citep{NREL_2018}}
+\label{fig:fig1_10}
+\end{figure}
+
+Organic based photovoltaic technologies have shown great promise and an even steeper learning curve over the last few years \citep{dong2012bibliometric, khalil2016review} with power conversion efficiencies of 13.2\% and lifetimes of over 5000 hours unencapsulated. Figure \ref{fig:fig1_10} presents a timeline of power conversion efficiencies for dominant photovoltaic technologies (Note: organic and perovskite typologies, indicating fastest rate or improvement, are circled).  Organic polymers such as P3HT and PCDTBT mixed with fullerenes such as PC$_{60}$BM for power harvesting have met incredible advances that allow for stand-alone atmospheric processing capabilities on tabletop inkjet printers, ultrasonic spray stations, sheet-to-sheet slot-die coater, roll-to-roll deposition with microgravure printing and slot-die coating, and laser scribing to enable monolithic interconnection and edge delete \citep{das_self-assembled_2014, das_optimization_2015, das_p3ht:pc61bm_2015, steirer2011enhanced, ratcliff2013investigating, ratcliff_energy_2012}. NREL has recently sponsored the SolarWindow CRADA whose aim is to "transparent electricity-generating OPV film for glass and flexible plastics...low-capex, high-throughput manufacturing; and they generate electricity in sunlight and artificial, diffused, reflected, shaded, and low-light condition" \citep{nrel_organic_2016}.
+
+The active absorbers in organic-based solar cells are shown in Figure \ref{fig:fig1_4} and can be characterized as a mixture of donor materials, conjugated thiophene monomers (represented with an S) with side chain esthers or alkyles (represented with an R), which produce $\pi$-electrons that can diffuse accross the entire polymer.  Acceptor materials are composed of fullerenes that begin as C$_{60}$ and undergo a series of reflux distillations with multiadducts to transform into PC$_{60}$BM, that allows solubility in typical solvents like o-dicholorobenzene or o-xylene.  The acceptor and donor are allowed to dissolve within one another and form a bulk heterojunction.  The typical device structure involves this bulk heterojunction sandwiched by a hole transport layer (such as PEDOT:PSS, or MoOx) and an electron transport layer (LiF or ZnO) which facilitates the extraction of exitonic charges, that have been generated and allowed to seperate under illumination.  Top electrodes that contact the electron transport layer tend to be annodic (such as Al) and bottom electrode that addresses the hole transport layer tend to be cathodic (such as ITO).  The bulk heterojunction is composed of microdomains of acceptors and donors, and the regularity of these domains is small enough to allow the hopping and transport of charges from generated excitons across the domains and to the contact so that they can be collected and converted to usable work \citep{krebs_polymer_2008}.  This hopping process is highlighted in the band diagram of Figure \ref{fig:fig1_5}(b).
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.5]{figures/fig1_4}
+\caption{Chemical structures of (a) donor and (b) acceptor materials for organic photovoltaics}
+\label{fig:fig1_4}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.5]{figures/fig1_5}
+\caption{(a) Device structure and visualization of excitonic generation in bulk heterojunction.  (b) Band diagram of bulk heterojunction solar cell.}
+\label{fig:fig1_5}
+\end{figure}
+
+\subsection{Electrochromism}
+
+Electrochromism is a phenomenon in which ions insert or extract from a material, driven by an external potential, and results in a change in color or transparency.  WO$_{3}$ has been among the most explored materials in this category because of its extremely stable switching and coloration mechanics with alkali ions such as Li$^{+}$.  The device works on the same principle as an electrochemical cell, in which two electrodes are submerged in an electrolyte containing cations, shown below in Figure \ref{fig:fig1_6}.  As an external potential is produced between the annode and cathode, a reduction-oxidation reaction takes place leading to the movement and insertion/extraction of Li$^{+}$ ions, thereby causing coloration/bleaching (Figure \ref{fig:fig1_6} left/right).  The underlying mechanism describing both coloration and bleaching can be expressed as:
+
+
+\begin{equation}
+WO_{x} + y(Li^{+} + e^{+}) \rightarrow  Li_{y}WO_{x}
+\end{equation}
+\begin{equation}
+Li_{y}WO_{x} - y(Li^{+} + e^{+}) \rightarrow  WO_{x}
+\end{equation}
+
+
+The above reactions indicate a reversible switching of states through an external potential forming tungsten bronze, where y refers to the number of insertion sites.  Electrochromic films are typically deposited on a conductive transparent substrate such as glass or a polyester like polyethylene terephthalate (PET) coated with ITO.  The film is then cast with an electrolyte which serves to contain Li$^{+}$ ions and acts as an electronic insulator.  Electrolytes can either be liquid or solid-state based on the molecular weight of the constituents.  This device is then sandwiched atop another transparent electrode.  The performance of electrochromic action depends on the electronic and ionic dynamics of the system.  A combination of a highly electronically conductive materials with several active insertion sites, as well as a highly ionically conductive electrolyte ensures both fast switching times and high dynamic contrast between colored and bleach states.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.45]{figures/fig1_6}
+\caption{Electrochemical reaction of WO$_{x}$ based electrochromic devices for reduction (left) and oxidation (right) reactions}
+\label{fig:fig1_6}
+\end{figure}
+
+\section{Literature Review}
+
+\subsection{Inkjet Printed Electrochromics}
+
+Inkjet printing is a technique that expels picoliter droplets of low-viscocity inks from the nozzle of the print head onto a two-dimensional plane.  Inkjet printing is a attractive fabrication technique that encompasses additive patterned deposition processes.  Inkjet printing allows for the deposition and patterning on a robust array of substrates, which can further be integrated with roll-to-roll industrial scale manufacturing  \citep{angmo_roll--roll_2013, yu_silver_2012}.  It allows for the rapid prototyping of devices and and products while allowing researchers to focus on the chemistry that constitutes them.  Ink formulation is often a complicated process of optimizing viscosity, particle size, and surface tension such that the printed pattern does not exhibit deformation, cracks, problems with adhesion, or problems with expelling droplets. The choice of solvent is extremely critical for mixtures of printable particles because it keeps them in a bound liquid form before meeting the substrate as a droplet and becomes allowed to dry.  Solvent selection must be considered in terms of its room temperature vapor pressure, such that premature evaporation on print heads is avoided, and so that post-deposition, the solvent can be burned off or decomposed completely.  For this reason, volatile alcohols or short chain esters are preferred.
+
+Inkjet printing has sparsely been applied to electrochromics.  In 2009, NREL began work on formulating printing techniques for windows using inorganic materials \citep{verrengia_smart_2010}.  They created a window with Li infused NiO as a counter electrode, and WO$_{3}$ as a working electrode and had moderate switching time with a 300 \degree C processing temperature.  In 2012, Costa et al. printed Vanadium Oxide gels \citep{costa_electrochromic_2012} and hydrated WO$_{3}$ nanoparticles \citep{costa_inkjet_2012} on PET, in which they found a "dual spectroscopic response depending on the applied voltage" which was attributed to the two crystalline states formed after hydration.  A dual-phase $\alpha$-WO$_{3}$/TiO$_{2}$/WO$_{x}$ was explored in a combination of amorphous and monoclinic WO$_{3}$ allowed for higher optical contrast due to more insertion sites, but also faster switching kinetics due to the crystalline phase.  This effect was punctuated with TiO$_{2}$ (a cathodic material) NP loading reduced the transition potential needed to induce coloration \citep{wojcik_microstructure_2012,  wojcik_statistical_2014}.  In 2015, they tailored a variety of WO$_{3}$ nanostructures including hydrated orthohombic nanorods and nanowires, as well as monoclinic nanosheets, and correlated their structure and morphology to conductivity, fluid control, processing temperature and overall electrochromic performance \citep{wojcik_tailoring_2015,santos_structure_2015}.  Reports of printed WO$_{3}$ sols on sintered Ag nanoparticles demonstrated a highly transparent substrate-independent realization \citep{layani_nanostructured_2014}.  In 2015, this work was continued with printing NiO and WO$_{3}$-based complementary electrodes and correlated performance with the number of printed layers \citep{cai_inkjet-printed_2015}.  Additionally, reports of an ink formulation that involved printing metallo-supramolecular polymers based on Fe and Ru was developed  and demonstrated a vast array of color-changing electrochromics \citep{chen_printed_2015}.  In 2016, reports of successfully printed WO$_{3}$-PEDOT:PSS based hybrid films in which high electrical conductivity was found to lead to faster response times, along with lowered redox potentials through the inclusion of PEDOT:PSS \citep{nguyen_one-step_2016}.  
+
+\subsection{Stretchable Electrochromics}
+
+Most recently, attention has been placed on stretchable devices for textiles and other wearables.  Stretchability for electrochromics has been described as more challenging than achieving flexibility because the demand of a more mechanically robust device structure that considers elasticity as well as flexure.  A stretchable device is expected to conform to non-planar surfaces without incurring performance degredation, along with being bent, twisted, and folded.  This introduces further challenges for ITO as an electrode, which is quite brittle, and provides a common ground to the entire electrochromic film.  Very few researchers have perused this idea, but the few reported implementations have been enabled by percolating AgNW networks embedded on stretchable substrates.  In 2014, electrodeposited WO$_{3}$ layers on AgNW/PDMS substates, as well as embedding these substrates on textiles, and EC devices were shown to still function post-mechanical deformation \citep{yan_stretchable_2014}.  In 2015, AgNWs were embedded on nano-cellulose paper and WO$_{3}$ was electrodeposited with an H$_{2}$SO$_{4}$ electrolyte, and was optimized against resistivity and transparency \citep{kang_foldable_2015}.
+
+\subsection{Solar-Powered Electrochromics}
+
+Self-powered EC devices represent an interesting design goal toward the development of multifunctional and efficient smart windows. Self-powered electrochromic devices fit within a subset of research interests that work toward pairing energy harvesting devices with electrochemical storage devices \citep{zhong_integration_2017}. A smart window adds additional design constraints such as high visible-range transparency with a priority on optical modulation, transition time, and low power consumption.  As previously mentioned, a report by NREL estimated that 1 kW of PV power can remove approximately 3 kW of heat from a building envelope \citep{deb2001stand}.  
+
+In the late 90s, electrochromic devices were too expensive to scale up \citep{bechinger_development_1998}, and similarly sized photovoltaic devices were not powerful enough.  As a result, the scientific literature was dominated with device design proposals than actual realizations \citep{benson_design_1995}.  Self-powered electrochromics have come in design flavors of vertical integration in which the electrochromic device is integrated directly on the device stack with the photovoltaic (largely dominated by photoelectrochromic cells with dye-sensitized solar cells), and laterally configured devices, in which the photovoltaic and electrochromic devices are seperate modules. The aforementioned issues with development of smart windows is to retain visibility functionality, which is why vertical integration has the problem of low optical modulation \citep{huang_photovoltaic_2012, huang_tunable_2012}, in addition to low bleached state transparency.  The integration of both systems in a lateral manner presents the most efficient generation of potential, and the most effective way of creating the most dynamic optical modulation range.  In 2013, Xie implemented such a design and it was the first to integrate a double-pole double throw switch the reverse the external reaction potential \citep{xie_integrated_2013}.  In 2014, Dyer et al. created a vertically integrated tandem organic cells sandwiching an electrochromic device device, which was addressed with internal PEDOT:PSS electrodes \citep{dyer_vertically_2014}.  In 2016, another integration of photo-electrochromic device was released, transitioning glass from green to blue, with low optical modulation \citep{huang_integration_2016}.  Table \ref{tab:tbl1_1} summarizes some experimental processing conditions and materials for integrated self-powered electrochromic devices.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.45]{figures/fig1_11}
+\caption{Categories and images of electrochromic devices reported in scientific literature}
+\label{fig:fig1_11}
+\end{figure}
+
+
+\begin{table*}[t]
+%p{5cm} is the space given to wrap the text
+\begin{tabular}{p{0.75 in} | p{0.75 in} | p{0.75 in} | p{0.75 in} | p{0.75 in} | p{0.75 in} | p{0.5 in}}
+Device \newline Orientation & EC \newline Deposition & EC \newline Material & PV \newline Deposition & PV \newline Material & Controller \newline Circuit & Ref.\\
+\hline \hline
+Vertical & Drop-cast & TMPD/ \newline TBAB4 & Sputter \newline Coat & $\alpha$-Si & None & Huang \newline (2012) \cr
+Vertical & Electro- \newline deposition & Prussian Blue & Sputter \newline Coat & Si-TFSC & None & Huang \newline (2012) \cr
+Lateral & Dip Coated & WO$_{3}$-2$\cdot$H$_{2}$O films & Screen Printed & Si (DSSC) & DPDT & Xie \newline (2013) \cr
+Vertical & Spray \newline Cast & ECP-Magenta/ \newline MCCP & Spin-Coat & PDPP3T: \newline PCBM60 & None & Dyer \newline (2014) \cr
+Lateral & Sputtering & NiO/WO$_{3}$ & MOCVD & InGaN/ \newline GaN \newline MQW  & None & Kwon \newline (2015) \cr
+Vertical & Spin Coat & Polyaniline: \newline PSS & Sputter & Si-TFSC & None & Huang \newline (2016) \cr
+\end{tabular}
+\\
+\caption{Comparison of implemented solar-powered electrochromic devices in scientific literature}
+\label{tab:tbl1_1}
+\end{table*}
+
+\section{Research Goals}
+
+\subsection{Smart windows, smart textiles, and the future}
+
+Previous studies on smart windows have focused on the fabrication using rigid substrate materials, use of flexible substrates opens new opportunities.
+Here we propose novel strategies to face the aforementioned challenges.  A monolithic integration of organic-based photovoltaic cells and nanomaterials for electrocrhromic layers will be demonstrated using a flexible polymer as the substrate, to achieve self-powered smart windows and wearable electrochromics.  The characteristics of the hybrid cells, such as transparency and switching time will also be determined.  The final device structure is illustrated in Figure \ref{fig:fig1_2}.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.45]{figures/fig7_1}
+\caption{Final device structure (a) as a block system and (b) fully realized, encompassing electrochromic and photovoltaic components demonstrating material and system view of Self-powered IoT-enabled Electrochromic Device}
+\label{fig:fig1_2}
+\end{figure}
+
+\subsection{Objectives}
+
+Despite maintaining a sufficiently high visible range transparency for window integration, a highly transparent solar cell results in lower utilization of the solar spectrum. Additionally, the power delivered by the photovoltaic device must be sufficient in order to instigate the reduction-oxidation reaction that initiates the electrochromic optical transition. Thus, such an electrochromic device should maintain a sufficiently low threshold voltage, while not sacrificing coloration and bleaching kinetics (transition time), as well as maintaining a sufficiently high optical density. When considered as a complete system, the photovoltaic device should consume an area much smaller than that of the electrochromic device. 
+
+With these design constraints in mind, integrating electrochromic devices with photovoltaic devices requires an interdisciplinary approach toward tackling such a design objective (powering an electrochromic device with sunlight), while considering other design tradeoffs (switching time, optical modulation, power conversion efficiency).  The purpose of this work is to extend the body of knowledge as related to stretchable, inkjet printed, self-powered, electrochromic devices, of which only few implementations have been reported.  This work shall provide new solutions, expertise, and insights into the design considerations and restrictions that come about when integrating both technologies.  It is the aim for this research to create simple, cost-effective, printable-based mixtures at lab-scale that would be compatible with large-scale R2R processes.
+
+
+This study aims to focus on:
+\begin{itemize}
+\item Low temperature processing techniques
+\item Uniform printed films
+\item Material performance stability
+\item Mechanical integrity under physical stress
+\item High optical contrast
+\item High power conversion efficiency
+\item High visible spectrum transparency
+\item Low-cost materials and inexpensive synthesis
+\end{itemize}
+
+
+\subsection{Research Approach}
+
+The topic of applied nanosciences, especially when applied to functional flexible devices requires an extraordinarily interdisciplinary approach.  The methods described in this work require the application of more than classical chemistry lab practicals and techniques, but also requires parsing and developing a deeper understanding of the results through informatics, data analytics, and other tools of specialized engineering backgrounds as well as academic bodies of knowledge.  Figure \ref{fig:fig1_7} attempts to visualize the core aspects of the experimental research workflow, while expounding on the tools and techniques used in this work.  The result of printed devices based on nanomaterials comes about from motivations from environmental sciences as applied to the built environment, materials science for understanding the properties of constituent materials needed to realize the devices, as well as device physics needed to model and predict their electrical behavior.  This research, in addition to traditional engineering and chemistry knowledge, required the skills of CAD design to simulate circuit elements and to perform the necessary layout tasks required to realize them with the selected materials.  The post-characterization understanding of results has come about from a quantitative approach, that is, translating and organizing observations to sets numerical values, such that statistical techniques and analysis can be applied to the data.  This allowed statistical inferential techniques and modeling techniques to be applied in order to develop digestible understanding and insights of the research explored in this work.  A subset of hypotheses are presented below, which illustrates the major scientific questions answered by this body of work.
+
+\begin{figure}[h*]
+\centering %centers the picture
+\includegraphics[scale=0.59]{figures/fig1_7}
+\caption{Visualization of device fabrication workflow and research techniques used in this dissertation}
+\label{fig:fig1_7}
+\end{figure}
+
+
+
+\singlespace
+\begin{itemize}
+
+\begin{comment}
+\item Chapter 2
+\begin{itemize}
+\item \underline{Hypothesis}: High quality monocrystalline single ZnO nanowires can be integrated on visibly transparent flexible surfaces with visibly transparent electrodes to produce low noise, high gain UV detectors.
+\begin{itemize}
+\item \textit{Observation 1}: Photodetection performance of ZnO NWs found not to be significantly different between Cr/Au (opaque) and ITO (transparent) contacts
+\begin{itemize}
+\item \textit{Experimental Design}: Photodetection was measured on Au and ITO contacts compared and treated as categorical testing variables.
+\item \textit{Fundamental Physical Interactions Uncovered}: Ohmic contact formation with ZnO with similar E$_{00}$/kT values between both contacts
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item \textit{Observation 2}: Evaporated ITO transparency and conductivity found to vary as a function of annealing time
+\begin{itemize}
+\item \textit{Experimental Design}: ITO transparency evolved across ordinal variables of time (varied) and temperature (fixed).
+\item \textit{Fundamental Physical Interactions Uncovered}: Low formation energies of Sn interstitials and O$_{2}$ vacancies, strong attraction, and the multivalence of tin allow for excess electrons without increased optical interband absorption.  Heat allows the vacuum deposited ITO to restore stoichiometry.
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item \textit{Observation 3}: Photoconductive gain found to attenuate from reverse illumination
+\begin{itemize}
+\item \textit{Experimental Design}: Photoconductivity measured as a function of Illumination side of PEN (categorical) 
+\item \textit{Fundamental Physical Interactions Uncovered}: PEN cutoff wavelength coincides with ZnO band edge energy
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item \textit{Observation 4}: Photoconduction found to increase with flexure
+\begin{itemize}
+\item \textit{Experimental Design}: Photoconductivity compared with and without flexure (single bending angle as categorical variable)
+\item \textit{Fundamental Physical Interactions Uncovered}: Piezoelectric effect inherent within ZnO punctuates conductivity under strain.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\item Chapter 3
+\begin{itemize}
+\item \underline{Hypothesis}: ZnTe nanomaterial geometry has no significant difference in electrical and optoelectronic performance responses.
+\begin{itemize}
+\item \textit{Observation 1}: Field effect mobility, subthreshold swing, and contact barrier found to be larger for ZnTe nanosheets, as compared to ZnTe nanowires
+\begin{itemize}
+\item \textit{Experimental Design}: IV characteristics across ZnTe nano-geometry (categories), for varying gate voltages (numerical ratio scale).
+\item \textit{Fundamental Physical Interactions Uncovered}: Conformal and intimate contact between ZnTe nanosheets and gate oxide.  NWs have a single line conduction path with a larger density of surface oxygen states impeding transport.
+\end{itemize}
+\item \textit{Observation 2}: Nanowires exhibit larger photoconductive gain than nanosheets
+\begin{itemize}
+\item \textit{Experimental Design}: IV measurements under different illumination power density (ratio scale), across two geometries (categorical).
+\item \textit{Fundamental Physical Interactions Uncovered}: Smaller power exponent of maximum current relation (for nanowires) indicates a greater abundance of trap states, from surface oxygen formation.  Larger surface to volume ratio of nanowires magnifies this effect.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{comment}
+
+\item Chapter 2
+\begin{itemize}
+\item \underline{Hypothesis}: The thickness of insulator layers for MIS Schottky devices produces linearly increasing Schottky barrier height for ZnO between Schottky contacts.
+\begin{itemize}
+\item \textit{Observation 1}: Local maxima of Schottky Barrier height found across all tested metal contacts, with the exception of Aluminum
+\begin{itemize}
+\item \textit{Experimental Design}: I-V measurements with extracted Schottky barrier height (numerical response) as a function of oxide layer thickness (numerical), and contact metal (categorical).
+\item \textit{Fundamental Physical Interactions Uncovered}: Local maxima of Schottky barrier created by increased oxide barrier height.  When oxide thickness increases further, increased barrier width suppresses conduction.  In the case of aluminum, at lower thicknesses, Al penetrates the oxide layer, bridging a conduction path to ZnO, which forms an ohmic contact.  Increased barrier width suppresses conduction.
+\end{itemize}
+\item \textit{Observation 2}: Schottky Barrier height found to increase due to oxygen plasma treatment
+\begin{itemize}
+\item \textit{Experimental Design}: Schottky Barrier Height (numerical response) before and after oxygen plasma (categorical, 2-sample matched pair t-test), across two metal contacts (categorical), and two plasma powers powers (categorical).
+\item \textit{Fundamental Physical Interactions Uncovered}:  Formation of Ag$_{2}$O and TiO$_{2}$ which have larger Schottky Barrier Height than unoxidized Ag and Ti.  Passivation of ZnO and SiO$_{2}$ surfaces reducing tunneling.
+\end{itemize}
+\item \textit{Observation 3}: Photovoltaic action correlated with large Schottky barrier heights on ZnO thin films with low wavelength (UV) illumination  for Ti/Ag and Ag oxygenated contacts
+\begin{itemize}
+\item \textit{Experimental Design}: IV measurements, PV performance parameters extracted (numerical response), as a function of contact geometry (categorical variable).
+\item \textit{Fundamental Physical Interactions Uncovered}: Explanation: Sub-band-edge illumination and large Schottky Barrier height through Ag and Ti/Ag oxidation favor spontaneous band splitting necessary for illuminated current.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\item Appendix A
+\begin{itemize}
+\item \underline{Hypothesis}: Using PEDOT:PSS as a Schottky contact, or applying a Schottky contact to PEDOT:PSS will result in necessary solar power conversion to operate electrochromic devices.
+\item \underline{Hypothesis}: Current-Voltage Hysteresis behavior and transformations (Voc+/-, Isc+/-, intersection, loop areas) for organic semiconductors are a function of testing parameters (maximum voltage, illumination, voltage scan rate) and processing parameters (device size, choice of PEDOT:PSS conductivity grade, substrate).
+\begin{itemize}
+\item \textit{Observation 1}: Intercepts (current or voltage axis crossings) found to be a strong function of device size and illumination.  Open circuit voltage found to shift for Al, and expand for Au.
+\begin{itemize}
+\item \textit{Experimental Design}: All processing and characterization conditions tabulated, extracted intercept points with secant method.  Empirical model describing evolution of intercepts developed using Multiple Linear Regression (MLR).
+\item \textit{Fundamental Physical Interactions Uncovered}: Further explored the interaction between the Al/PEDOT:PSS interface and \\Au/PEDOT:PSS interface and traced respective movement of intercept points.  For short circuit current, an absolute increase of current is found to correspond to increased device areas, which was tied to the increase of absorbed light flux through each progressively larger device.  In the case of V$_{oc}$, the logrithmic ratio of illuminated to saturated current determined the direction of V$_{oc}$ shift, and because Au is less anodic than Al, open circuit voltage was found to decrease.
+\end{itemize}
+\item \textit{Observation 2}: Intersections between forward and reverse traces were found to have a non-origin shift as a function of device size, for nonconductive PEDOT:PSS on ITO substrates.
+\begin{itemize}
+\item \textit{Experimental Design}: All processing and characterization conditions tabulated, extracted intercept points with secant method.  Empirical model describing evolution of intersections developed using Multiple Linear Regression (MLR).
+\item \textit{Fundamental Physical Interactions Uncovered}: First quadrant intersections which indicate further that a memcapacitance effect via slow states in PEDOT:PSS.
+\end{itemize}
+\item \textit{Observation 3}: Loop area increased as a function of device size and in most cases increased device sizes.
+\begin{itemize}
+\item \textit{Experimental Design}: All processing and characterization conditions tabulated, extracted hysteresis loop areas with composite Simpson's 3/8th method.  Empirical model describing evolution of intersections developed using Multiple Linear Regression (MLR).
+\item \textit{Fundamental Physical Interactions Uncovered}: Larger device sizes and greater illumination increased the density of trapped carriers.  With Au/Si on conductive PEDOT:PSS, this case was an exception because a cathodic material of heavily doped Si increased the conduction path through PEDOT:PSS, which increased the rate at which the electrons can detrap, thereby suppressing the formation of a hysteresis loop.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\begin{comment}
+\item Chapter 6
+\begin{itemize}
+\item \underline{Hypothesis}: Annealed MgZnO nanowires will result in shifted cutoff detection wavelength for UV-B and UV-C regimes.
+\begin{itemize}
+\item \textit{Experimental Design}: A set of four annealing conditions (combination of two temperatures, and two ambient) was applied to nanowire samples across four independent sets of the same initial group.  Results compared against control group using ANOVA and significant differences extracted with Tukey's honest significant difference (HSD) test.
+\begin{itemize}
+\item \textit{Observation 1}: Annealing conditions have significant effect on nanowire size characteristics and aspect ratio.
+\item \textit{Fundamental Physical Interactions Uncovered}: XRD uncovered shifts ZnO related diffraction angles for peak positions which corresponds to changes in lattice parameters from Mg$^{2+}$ incorporation in Zn$^{2+}$ sites on the nanowire lattice.
+\item \textit{Observation 2}: XRD reveals presence of many rock salt phases and various intensities growing due to annealing conditions.  CL reveals movement of luminecence peaks at 230 nm.
+\item \textit{Fundamental Physical Interactions Uncovered}: Annealing in oxygen led to greater formation of MgO and Zn$_{2}$SiO$_{4}$.  This is corroborated with their band energies and luminescence peak positions.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{comment}
+
+\item Chapter 3
+\begin{itemize}
+\item \underline{Hypothesis}: Low reaction potential electrochromics can be achieved with TiO$_{2}$ NP loading.
+\begin{itemize}
+\item \textit{Experimental Design}: Mixture design of varying two types of WO$_{3}$ nanoparticles and TiO$_{2}$ nanoparticles were tested, switching characteristics and optical modulation recorded and tabulated.
+\begin{itemize}
+\item \textit{Observation 1}: Coloration density and contrast trade off with switching time and reaction potential, without the inclusion of TiO2.
+\item \textit{Observation 2}: W-TiO$_{2}$ led to greater optical modulation without significant compromise in switching time and reaction potential
+\item \textit{Fundamental Physical Interactions Uncovered}: W doped TiO$_{2}$ introduce more insertion and extraction sites for Li+ ions but due to the higher coordination numbers and high electronegativity, bonding to O$_{2}$ radicals.  The 6 courdination in WO$_{3}$ and 4 courdination of TiO$_{2}$ impedes electronic charge transfer, but will increase the number of insertion sites.
+\end{itemize}
+\end{itemize}
+\item \underline{Hypothesis}: PCDTBT thin films can be applied to stretchable surfaces and can power electrochromic devices.
+\begin{itemize}
+\item \textit{Experimental Design}: Devices were fabricated composed of conductive and non-conductive PEDOT:PSS HTL and ITO/PET and \\AgNW/PDMS substrates.  Solar cell performance parameters extracted from IV measurements and tabulated.
+\begin{itemize}
+\item \textit{Observation 1}: PCDTBT films exhibit larger power conversion efficiency with NC PEDOT:PSS.
+\item \textit{Fundamental Physical Interactions Uncovered}: The higher solid content and acidity of non-codncutive PEDOT:PSS allow the device to supress losses from laterial conduction between contacts.
+\item \textit{Observation 2}: PCDTBT films on AgNW/PDMS exhibit smaller power conversion efficiencies
+\item \textit{Fundamental Physical Interactions Uncovered}: Nonuniform distribution of AgNWs leads to larger series resistance from non-optimized conduction paths of percolation networks.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\end{itemize}
+
+\doublespace
+\subsection{Merit}
+
+It is the intent of this work to describe the results of this Ph.D. research in a form that is standard and easily understood from professionals in the wide society of engineers.  Systematic literature reviews and the parsing of experimental information have been entered in databases, and have been used to translate a set of facts into novel, actionable, and testable research work.  This work uses the research and information of authors who came before it, which have included journal periodicals, conferences, and periodic reviews.  The authors have made attempts to ensure that all work is repeatable by future researchers.  A set of underlying hypotheses, discoveries, and scientific explanation is highlighted in each chapter, which further explains how the research work conducted expands each field respectively.
+The intellectual merit of this work lies in the interdisciplinary research approach, that has allowed for the exploration of a singular design problem in the context of multiple material systems, multiple goals, and multiple trade-offs that must be reconciled with one another.  Each study marks a series of intellectually rigorous stages including planning, executing, and analyzing.  Each process requires a certain dedication toward learning, due diligence, discovery and confirming abstract expectations with evidence in the physical world. Once again, the tools and techniques acquired acquired to contextualize the torrent of information are detailed in \ref{fig:fig1_7}.
+
+The broader impact of this work is, in addition to the realization of smart windows that are self-powered, the advances will open up numerous opportunities using self-powered (solar) electrochromic devices.  Furthermore, novel integration strategies will bring innovation from concept-to-commercialization at an accelerated pace in this rapidly growing field of organic and nanomaterial-based applications.
+
+\begin{figure}[t]
+\centering %centers the picture
+\includegraphics[scale=0.6]{figures/fig1_8}
+\caption{Organization of photovoltaic material systems and nanomaterials explored in this work.}
+\label{fig:fig1_8}
+\end{figure}
+
+\section{Organization of the dissertation}
+
+The organization of this thesis falls under the order in which the work was executed and completed.  Chapters 2 and Appendix A discuss the work of power generation on ZnO thin films.  Chapter 2 discusses ZnO based schottky devices and the processing conditions that lead to larger schottky barrier height and power conversion efficiency.  Appendix A characterizes, models, and discusses the hysteresis behavior exhibited with the inclusion of an organic conductive polymer, PEDOT:PSS. Chapter 3 discusses the organic and inorganic synthesis and fabrication of a self-powered electrochromic device on stretchable substrates.  The organization of this thesis is combined upon the single learning tracks presented in Figure \ref{fig:fig1_8}, which included nanomaterial integration on flexible and stretchable substrates and transparent, high open-circuit solar cell devices, which shows a culmination on both to the final implementation of a solar-powered smart window in Chapter 3.
+%Chapter 2 and 3 discuss the performance of nanowire based II-VI materials as photodetectors, and their integration on polymer substrates.  Chapter 2 focuses on ZnO as a UV detector and Chapter 3 focuses on ZnTe as a visible light detector.  
+%Chapter 6 discusses further material considerations for tuning the detection range of ZnO nanowires by alloying Mg.  
+
+\doublespace
